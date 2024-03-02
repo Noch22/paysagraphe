@@ -11,7 +11,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-
+console.log(process.env.NODE_ENV);
 const IS_DEV = process.env.NODE_ENV !== 'production';
 const IS_PROD = process.env.NODE_ENV === 'production';
 const devPort = 3003;
@@ -44,12 +44,9 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: IS_DEV ? publicPath: '',
   },
   devtool: IS_DEV ? 'source-map' : false,
-  resolve: {
-
-  },
+  resolve: {},
   module: {
     rules: [
       {
@@ -101,8 +98,8 @@ const config = {
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'asset/resource'
-      }
+        type: 'asset/resource',
+    }
     ]
   },
   optimization: {

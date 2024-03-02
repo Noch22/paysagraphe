@@ -1,0 +1,105 @@
+footer {
+    width: 100%;
+    padding: 250px 0 0;
+    position: relative;
+
+    .top_footer {
+        display: flex;
+        flex-direction: row;
+
+        .left_top_footer {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: flex-start;
+
+            .socials {
+
+                li {
+                    margin: 10px 0;
+                }
+                i {
+                    font-size: 32px;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+
+            .footer_nav {
+                margin: 0 0 0 50px;
+                a {
+                    font-family: 'DTGetai', sans-serif;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 40px;
+                    color: white;
+                }
+
+                li {
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        .right_top_footer {
+            width: 50%;
+        }
+    }
+
+    .bottom_footer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+
+        .left_bottom_footer {
+            width: 50%;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 15px;
+
+            a {
+                color: white;
+                font-size: 16px;
+                text-decoration: none;
+                font-family: "Gotham thin", sans-serif;
+            }
+        }
+
+        .right_bottom_footer {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 15px;
+
+            h3 {
+                font-family: 'DTGetai', sans-serif;
+                font-size: 32px;
+                color: white;
+                margin-bottom: 25px;
+            }
+
+            p {
+                color: white;
+                font-size: 16px;
+                text-decoration: none;
+                font-family: "Gotham thin", sans-serif;
+            }
+        }
+    }
+
+    .color_aura {
+        display: block;
+        position: absolute;
+        width: 250%;
+        height: 150px;
+        background: linear-gradient(#232323, #1E2C40);
+        filter: blur(5rem);
+        bottom: 0;
+        z-index: -1;
+        left: -50%;
+    }
+}

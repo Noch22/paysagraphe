@@ -1,6 +1,5 @@
-
-
-.main{
-  background-color: limegreen;
-  height: 100px;
-}
+@import url(scss/reset.scss);
+@import url(fonts.scss);
+@import url(scss/home.scss);
+@import url(scss/header.scss);
+@import url(scss/footer.scss);

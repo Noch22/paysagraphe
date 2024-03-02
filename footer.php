@@ -1,0 +1,43 @@
+<footer>
+    <div class="top_footer">
+        <div class="left_top_footer">
+            <div class="socials">
+                <ul>
+                    <?php 
+                        $socials = get_field("reseau_social", "options");
+                        foreach($socials as $social):
+                    ?>
+                    <li><a href="<?= $social["lien"]["url"]?>" target="_blank"><?= $social['icone']?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+            <div class="footer_nav">
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Work</a></li>
+                        <li><a href="">Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="right_top_footer"></div>
+    </div>
+    <div class="bottom_footer">
+        <div class="left_bottom_footer">
+            <a href="">Mentions légales</a>
+        </div>
+        <div class="right_bottom_footer">
+            <h3>France, <?= do_shortcode('[year]')?></h3>
+            <p>&copy; Tous droits réservés à Noah Buisson</p>
+        </div>
+    </div>
+    <div class="color_aura"></div>
+</footer>
+
+
+
+
+<?php
+wp_footer();
+?>
