@@ -84,8 +84,6 @@ $gallery = get_field("gallery", 'options');
                 </div>
                 <?php get_header(); ?>
                 <main>
-                <div class="circle">
-                </div>
                     <?php
 
                         $gallery = get_posts(array(
@@ -93,23 +91,25 @@ $gallery = get_field("gallery", 'options');
                             "posts_per_page" => -1
                         ));
                     ?>
-                    <div class="swiper-container gallery-top">
-                        <div class="swiper-wrapper">
-                            <?php
-                                foreach($gallery as $image){
-                                    $cover = get_field("image_mise_en_avant", $image->ID);
-                                    $title = get_field("nom_du_projet", $image->ID);
-                                    $add_text = get_field("texte_additionnel", $image->ID);
-                                    $project_type = get_field("type_de_projet", $image->ID);
-                                    ?>
-                                        <div class="swiper-slide">
-                                            <h1 class="slider_text_title"><?= $title ?></h1>
-                                            <p class="slider_text_additional"><?= $add_text ?></p>
-                                            <img width="<?= $cover['sizes']['cover_image-width'] ?>" height="<?= $cover['sizes']['cover_image-height'] ?>" src="<?= $cover['sizes']['cover_image'] ?>" alt="<?= $cover['alt'] ?>">
-                                        </div>
-                                    <?php
-                                }
-                            ?>
+                    <div class="banner">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <?php
+                                    foreach($gallery as $image){
+                                        $cover = get_field("image_mise_en_avant", $image->ID);
+                                        $title = get_field("nom_du_projet", $image->ID);
+                                        $add_text = get_field("texte_additionnel", $image->ID);
+                                        $project_type = get_field("type_de_projet", $image->ID);
+                                        ?>
+                                            <div class="swiper-slide">
+                                                <h1 class="slider_text_title"><?= $title ?></h1>
+                                                <p class="slider_text_additional"><?= $add_text ?></p>
+                                                <img width="<?= $cover['sizes']['cover_image-width'] ?>" height="<?= $cover['sizes']['cover_image-height'] ?>" src="<?= $cover['sizes']['cover_image'] ?>" alt="<?= $cover['alt'] ?>">
+                                            </div>
+                                        <?php
+                                    }
+                                ?>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-container gallery-thumbs">

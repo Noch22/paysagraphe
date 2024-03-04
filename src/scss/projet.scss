@@ -1,0 +1,100 @@
+.top_titles {
+    h1 {
+        font-family: 'DTGetai', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 96px;
+        padding-top: 20px;
+        color: white;
+    }
+
+    p {
+        font-family: "Gotham Thin";
+        font-size: 48px;
+        color: white;
+        font-style: italic;
+    }
+}
+
+.marquee_projects {
+    transform: rotate(6deg) translate(-277px, 169px);
+    width: 200%;
+    border: 1px solid black;
+    position: relative;
+}
+
+.top_image {
+    clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+}
+
+
+.layout_texte {
+    color: white;
+    margin: 20px 0;
+    font-family: "Gotham";
+
+    h1 {
+        font-family: "Gotham black";
+        font-size: 32px;
+    }
+
+    h2 {
+        font-family: "Gotham black";
+        font-size: 24px;
+    }
+
+    p {
+        font-family: "Gotham";
+    }
+
+    ul {
+        list-style: circle;
+        
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+}
+
+
+.layout_galerie {
+    .grid {
+        width: 1024px;
+        margin: 20px auto;
+        columns: 4;
+        column-gap: 40px;
+
+        .item {
+            width: 100%;
+            margin-bottom: 10px;
+            break-inside: avoid;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        width: calc(100% - 40px) !important;
+        columns: 3 !important;
+    }
+}
+
+@media (max-width: 1040px) {
+    .grid {
+        columns: 2 !important;
+    }
+}
+
+@media (max-width: 988px) {
+    .grid {
+        columns: 1 !important;
+        width: 40% !important;
+    }
+}

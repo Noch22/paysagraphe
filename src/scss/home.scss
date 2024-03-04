@@ -30,7 +30,6 @@ html, body {
     background: #141414;
     font-family: "Neue Montreal";
     overflow-x: hidden;
-    cursor: none;
 }
 
 .cursor-follower {
@@ -432,7 +431,7 @@ img {
                 }
 
                 &.label_message {
-                    transform: translate(0, 10px);
+                    transform: translate(0, 20px);
 
                 }
             }
@@ -467,6 +466,7 @@ img {
                 color: #141414;
                 padding: 5px;
                 font-family: "Gotham", sans-serif;
+                transform: translate(0, 10px);
                 &:focus {
                     outline: none;
                 }
@@ -474,6 +474,13 @@ img {
 
             .wpcf7-not-valid-tip {
                 font-family: "Gotham", sans-serif;
+                transform: translate(0, 10px);
+            }
+
+            .wpcf7-response-output {
+                font-family: "Gotham", sans-serif;
+                color: #ffffff;
+                border: none;
             }
 
             input[type="submit"]{
@@ -522,5 +529,12 @@ img {
                     cursor: none;
                 }
             }
+        }
+    }
+
+
+    .banner {
+        .swiper-slide-next, .swiper-slide-prev {
+            
         }
     }
