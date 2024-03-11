@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     images.forEach((image) => {
       image.addEventListener("mouseenter", () => {
         cursorInner.style.backgroundImage = `url('https://mirkozeppieri.emanuelepapale.com/assets/images/arrow_up.png')`;
-        cursorInner.style.width = "160px";
-        cursorInner.style.height = "160px";
-        cursorInner.style.backgroundSize = "100px";
+        cursorInner.style.width = "80px";
+        cursorInner.style.height = "80px";
+        cursorInner.style.backgroundSize = "40px";
       });
 
       image.addEventListener("mouseleave", () => {
@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
         cursorInner.style.backgroundImage = `url('https://i.ibb.co/cv0WsPc/curseur-see.gif')`;
-        cursorInner.style.width = "160px";
-        cursorInner.style.height = "160px";
-        cursorInner.style.backgroundSize = "125px";
+        cursorInner.style.width = "80px";
+        cursorInner.style.height = "80px";
+        cursorInner.style.backgroundSize = "80px";
     });
 
       link.addEventListener("mouseleave", () => {

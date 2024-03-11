@@ -65,7 +65,7 @@
         width: 1024px;
         margin: 20px auto;
         columns: 4;
-        column-gap: 40px;
+        column-gap: 20px;
 
         .item {
             width: 100%;
@@ -79,22 +79,25 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .grid {
         width: calc(100% - 40px) !important;
         columns: 3 !important;
     }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 900px) {
     .grid {
         columns: 2 !important;
+        width: 30%;
     }
 }
 
-@media (max-width: 988px) {
-    .grid {
-        columns: 1 !important;
-        width: 40% !important;
-    }
+.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 25% !important;
+
 }

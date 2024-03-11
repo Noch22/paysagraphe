@@ -3,7 +3,8 @@
   foreach ($content['photos'] as $photo) {
     ?>
     <div class="item">
-      <img src="<?=$photo['sizes']['cover_thumbnail'] ?>" alt="<?=$photo['alt']?>">
+      <img src="<?=$photo['url'] ?>" alt="<?=$photo['alt']?>" class="btn-img">
+      
     </div>
     <?php
   }

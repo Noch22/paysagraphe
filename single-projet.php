@@ -30,7 +30,8 @@
                 </div>
                 <div class="top_image">
                     <img src="<?=$image['url']?>" alt="<?=$image['alt']?>">
-            </div>
+                </div>
+        </main>
             <?php
                foreach ($contenus as $content) {
                 $template_name = $content['acf_fc_layout'];
@@ -49,7 +50,7 @@
 
 
             <?php get_footer(); ?>
-        </main>
+
 
 
 
