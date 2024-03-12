@@ -91,21 +91,26 @@ $gallery = get_field("gallery", 'options');
                             "posts_per_page" => -1
                         ));
                     ?>
-                    <div class="banner">
+                    <div class="banner" id="work">
                         <div class="swiper-container gallery-top">
                             <div class="swiper-wrapper">
                                 <?php
                                     foreach($gallery as $image){
+                                        $link = get_permalink($image->ID);
                                         $cover = get_field("image_mise_en_avant", $image->ID);
                                         $title = get_field("nom_du_projet", $image->ID);
                                         $add_text = get_field("texte_additionnel", $image->ID);
                                         $project_type = get_field("type_de_projet", $image->ID);
                                         ?>
+                                        
                                             <div class="swiper-slide">
+                                            <a href="<?=$link?>" class="project_link">
                                                 <h1 class="slider_text_title"><?= $title ?></h1>
                                                 <p class="slider_text_additional"><?= $add_text ?></p>
                                                 <img width="<?= $cover['sizes']['cover_image-width'] ?>" height="<?= $cover['sizes']['cover_image-height'] ?>" src="<?= $cover['sizes']['cover_image'] ?>" alt="<?= $cover['alt'] ?>">
+                                            </a>                                           
                                             </div>
+                                        
                                         <?php
                                     }
                                 ?>
@@ -126,7 +131,7 @@ $gallery = get_field("gallery", 'options');
                             ?>
                         </div>
                     </div>
-                    <div class="about">
+                    <div class="about" id="about">
                         <img src="<?= get_template_directory_uri() . "/src/assets/LOGO.png"?>" alt="image Noah Buisson">
                         <div class="about_text">
                             <h1>Noah Buisson</h1>
@@ -134,7 +139,7 @@ $gallery = get_field("gallery", 'options');
                         </div>
                     </div>
                     <div class="contact">
-                        <div class="marquee contact_marquee">
+                        <div class="marquee contact_marquee" id="contact">
                             <?php
                             for($i = 0; $i < 4; $i++){
                                 ?>

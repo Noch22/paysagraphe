@@ -28,6 +28,7 @@ tl.to(gradientBox, {
 
 document.addEventListener('DOMContentLoaded', function() {  
     const togglebutton = document.querySelector('button.menu');
+    const links = document.querySelectorAll('.menu-item a');
     let isOpen = false;
 
     gsap.set(".menu-item p", { y: 225 });
@@ -49,13 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     timeline.to(".header", {
         duration: 1,
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         ease: "power4.inOut",
     });
 
     timeline.to(".menu-item p", {
         duration: 1.5,
         y: 0,
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         stagger: 0.2,
         ease: "power4.out",
     }, "-=1");
@@ -69,5 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
         isOpen = !isOpen;
     });
 
+    links.forEach(link => {
+    link.addEventListener('click', function() {
+        timeline.reverse();
+        isOpen = !isOpen;
+        togglebutton.classList.toggle('opened');
+        menupage.classList.toggle('opened');
+    });
+});
+
 
 });
+
+

@@ -7,6 +7,24 @@ function body() {
 let tl = gsap.timeline({delay: 0});
 
 if(document.querySelector('.col')){
+  if(localStorage.getItem('visited')){
+    tl.to(".container", {
+    scale: 6,
+    duration: 3,
+    opacity: 0,
+    display: "none",
+    ease: "power4.inOut"
+}, "-=2");
+
+tl.call(body);
+
+tl.to(".content", {
+    top: 0,
+    duration: 3,
+    opacity: 1,
+    ease: "power3.out"
+});
+  }
 
 tl.to(".col", {
     top: "0",
@@ -65,6 +83,8 @@ tl.to(".content", {
     opacity: 1,
     ease: "power3.out"
 });
+
+localStorage.setItem('visited', 'true');
 } else {
   body();
 }
@@ -92,7 +112,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
   watchSlidesProgress: false,
 });
 var galleryTop = new Swiper('.gallery-top', {
-  spaceBetween: 10,
+  spaceBetween: 500,
   slidesPerView: 1,
   centeredSlides: true,
   loop: false,
@@ -134,7 +154,29 @@ var galleryTop = new Swiper('.gallery-top', {
   });
 }
 
+import SplitType from 'split-type'
+const text = new SplitType('.homepage_text h1')
+
+gsap.set(".homepage_text h1 .char", {y: 225, rotation: 30})
+gsap.set(".homepage_text h1", {scale: 1.2})
+
+const timeline = gsap.timeline();
+
+timeline.to(".homepage_text h1 .char", {
+  delay: 5.5,
+  duration: 2.5,
+  y: 0,
+  rotation: 0,
+  stagger: 0.1,
+  ease: "power3.inOut"
+});
+
+timeline.to(".homepage_text h1", {
+  scale: 1,
+  ease: "expo.inOut"
+}, "-=1");
 
 
 
-  // cursor 
+
+// smooth scroll

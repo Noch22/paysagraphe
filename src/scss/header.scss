@@ -101,7 +101,6 @@ header {
         width: 100vw;
         height: 100vh;
         will-change: transform;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
     .overlay-menu {
@@ -124,6 +123,7 @@ header {
         display: flex;
         
         p {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           a {
             text-decoration: none;
             color: #ffffff;

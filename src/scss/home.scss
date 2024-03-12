@@ -268,12 +268,21 @@ img {
 
   .homepage_text {
     position: absolute;
-    top: 50px;
+    top: 0;
+    transform: translate(0, 150%);
     left: 0;
     z-index: 1;
     width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     h1 {
+    
+        .char{
         color: white;
+        font-kerning: none;
+        position: relative;
+        line-height: 80%;
+        will-change: transform;
+    }
     }
   }
 
@@ -290,6 +299,14 @@ img {
   .swiper-slide {
     background-size: cover;
     background-position: center;
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
   }
 
   .gallery-top {
@@ -441,6 +458,7 @@ img {
                 border: none;
                 border-bottom: 1px solid white;
                 height: 20px;
+                width: 348px;
                 &:focus {
                     outline: none;
                     
@@ -501,6 +519,8 @@ img {
                     background-color: #fff;
                     color: black;
                     transition: all 0.3s ease-in-out;
+                    -webkit-box-shadow: 0px 0px 21px 5px rgba(255,255,255,0.5); 
+                    box-shadow: 0px 0px 21px 5px rgba(255,255,255,0.5);
                 }
             }
         }
@@ -533,8 +553,15 @@ img {
     }
 
 
-    .banner {
-        .swiper-slide-next, .swiper-slide-prev {
-            
-        }
-    }
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

@@ -14,9 +14,12 @@
             <div class="footer_nav">
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Work</a></li>
-                        <li><a href="">Me</a></li>
+                        <?php
+                    $home = get_home_url();
+                        ?>
+                        <li><a href="<?= $home."#work" ?>">Work</a></li>
+                        <li><a href="<?= $home."#about" ?>">About</a></li>
+                        <li><a href="<?= $home."#contact" ?>">Contact</a></li>
                     </ul>
                 </nav>
             </div>

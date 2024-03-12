@@ -24,15 +24,18 @@
             </button> -->
         </div>
             <nav class="header">
+            <?php
+            $home = get_home_url();
+            ?>
                 <div class="overlay-menu">
                     <div class="menu-item">
-                        <p><a href="">Home</a></p>
+                        <p><a href="<?= $home."#work" ?>">Work</a></p>
                     </div>
                     <div class="menu-item">
-                        <p><a href="">Work</a></p>
+                        <p><a href="<?= $home."#about" ?>">About</a></p>
                     </div>
                     <div class="menu-item">
-                        <p><a href="">Me</a></p>
+                        <p><a href="<?= $home."#contact" ?>">Contact</a></p>
                     </div>
                 </div>
             </nav>
@@ -44,7 +47,6 @@
                     ?>
                     <li><a href="<?= $social["lien"]["url"]?>"><?= $social['icone']?></a></li>
                     <?php endforeach; ?>
-                    <li><a href="test">test</a></li>
                 </ul>
             </nav>
         </div>

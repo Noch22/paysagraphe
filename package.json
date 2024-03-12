@@ -43,6 +43,8 @@
     "webpack-notifier": "^1.15.0"
   },
   "dependencies": {
-    "photoswipe": "^5.4.3"
+    "@studio-freight/lenis": "^1.0.39",
+    "photoswipe": "^5.4.3",
+    "split-type": "^0.3.4"
   }
 }
