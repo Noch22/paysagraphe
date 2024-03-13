@@ -7,7 +7,7 @@ function body() {
 let tl = gsap.timeline({delay: 0});
 
 if(document.querySelector('.col')){
-  if(localStorage.getItem('visited')){
+  if(sessionStorage.getItem('visited')){
     tl.to(".container", {
     scale: 6,
     duration: 3,
@@ -84,7 +84,6 @@ tl.to(".content", {
     ease: "power3.out"
 });
 
-localStorage.setItem('visited', 'true');
 } else {
   body();
 }
@@ -161,7 +160,15 @@ gsap.set(".homepage_text h1 .char", {y: 225, rotation: 30})
 gsap.set(".homepage_text h1", {scale: 1.2})
 
 const timeline = gsap.timeline();
-
+if(sessionStorage.getItem('visited')){
+  timeline.to(".homepage_text h1 .char", {
+    duration: 2.5,
+    y: 0,
+    rotation: 0,
+    stagger: 0.1,
+    ease: "power3.inOut"
+  });
+} else {
 timeline.to(".homepage_text h1 .char", {
   delay: 5.5,
   duration: 2.5,
@@ -171,12 +178,14 @@ timeline.to(".homepage_text h1 .char", {
   ease: "power3.inOut"
 });
 
+sessionStorage.setItem('visited', 'true');
+}
+timeline.to(".homepage_text h1", {
+  scale: 1.1,
+  ease: "expo.inOut"
+}, "-=0.5");
+
 timeline.to(".homepage_text h1", {
   scale: 1,
   ease: "expo.inOut"
-}, "-=1");
-
-
-
-
-// smooth scroll
+}, "-=0.5");

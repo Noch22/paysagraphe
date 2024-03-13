@@ -91,6 +91,7 @@ $gallery = get_field("gallery", 'options');
                             "posts_per_page" => -1
                         ));
                     ?>
+                    <div class="circle"></div>
                     <div class="banner" id="work">
                         <div class="swiper-container gallery-top">
                             <div class="swiper-wrapper">
@@ -129,6 +130,7 @@ $gallery = get_field("gallery", 'options');
                                     <?php
                                 }
                             ?>
+                            
                         </div>
                     </div>
                     <div class="about" id="about">
