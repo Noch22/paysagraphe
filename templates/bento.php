@@ -5,12 +5,12 @@ wp_head();
  <div class="cursor-follower">
         <div class="cursor-follower-inner"></div>
     </div>
-<main style="padding: 0;">
     <div class="profile_picture">
         <img src="<?= get_template_directory_uri() . "/src/assets/LOGO.png"?>" alt="image Noah Buisson">
     </div>
     <div class="profile_name">
-        <h1>Noah Buisson</h1>
+        <h1>Noah <span id="buisson">Buisson</span></h1>
+        <p>Photographe et développeur 🚀</p>
     </div>
     <div class="cards">
                     <?php 
@@ -26,7 +26,7 @@ wp_head();
                             <p class="bento_card_title"><?= $social['lien']['title']?></p>
                         </div>
 
-                        <a href="<?= $social["lien"]["url"]?>" target="_blank">Suivre</a>
+                        <a href="<?= $social["lien"]["url"]?>" target="_blank" class="bento_follow">Suivre</a>
                     </div>
                     <?php endforeach; ?>
 
@@ -35,10 +35,6 @@ wp_head();
 
 
 
-</main>
-
-
 <?php
-
 wp_footer();
 ?>

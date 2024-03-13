@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
+
+if(footer){
     footer.addEventListener("mouseenter", () => {
       cursorInner.style.backgroundImage = `url('https://i.ibb.co/jDfQWgh/see-youv2.gif')`;
       cursorInner.style.width = "160px";
@@ -70,4 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
       cursorInner.style.height = "8px";
       cursorInner.style.backgroundSize = "0px";
     });
-  });
+}
+
+});

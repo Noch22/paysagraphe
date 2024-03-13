@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: "power4.out",
     }, "-=1");
 
+
+if(togglebutton){
     togglebutton.addEventListener('click', function() {
         if (isOpen) {
             timeline.reverse();
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         isOpen = !isOpen;
     });
-
+}
     links.forEach(link => {
     link.addEventListener('click', function() {
         timeline.reverse();
