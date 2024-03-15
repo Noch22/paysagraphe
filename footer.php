@@ -12,6 +12,7 @@
                 </ul>
             </div>
             <div class="footer_nav">
+                <img src="<?= get_template_directory_uri() . "/src/assets/see_youv2.gif"?>" alt="">
                 <nav>
                     <ul>
                         <?php

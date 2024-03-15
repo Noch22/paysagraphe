@@ -14,13 +14,15 @@ wp_head();
     </div>
     <div class="cards">
                     <?php 
-                        $socials = get_field("reseau_social", "options");
+                        $socials = get_field("mes_liens", "options");
                         foreach($socials as $social):
                         $html_string = $social['icone'];
                         $class = "fa-instagram";
+                        $linkedin = "fa-linkedin";
                         $is_instagram = preg_match('<i class="[^"]*'.$class.'[^"]*">', $html_string);
+                        $is_linkedin = preg_match('<i class="[^"]*'.$linkedin.'[^"]*">', $html_string);
                     ?>
-                    <div class="card<?php print $is_instagram ? " instagram" : ""; ?>">
+                    <div class="card<?php print $is_instagram ? " instagram" : ""; print $is_linkedin ? " linkedin" : "";?>">
                         <div class="card_top">
                             <?= $social['icone']?>
                             <p class="bento_card_title"><?= $social['lien']['title']?></p>

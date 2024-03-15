@@ -180,3 +180,56 @@ header {
     }
 
   }
+
+// RESPONSIVE
+
+@media screen and (max-width: 420px){
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 420px){
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+    
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+
+    
+}
+
+@media screen  and (max-width: 768px){
+  .header_bar {
+    .custom-logo-link {
+      img {
+        width: 60px;
+      }
+    }
+  }
+
+  .menu_page {
+      nav:not(.header_social) {
+        left: 20px;
+      }
+
+      .overlay-menu {
+        .menu-item {
+          font-size: 64px;
+        }
+      }
+      
+  }
+
+  .margin {
+    .header_bar {
+      padding: 20px 15px !important;
+    }
+  }
+}

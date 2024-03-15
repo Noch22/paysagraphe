@@ -33,7 +33,8 @@
 
 
 .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     flex-wrap: wrap;
     flex-direction: row;
     padding: 40px 0 0;
@@ -129,21 +130,13 @@
 
             &::before {
             background: radial-gradient(
-                800px circle at var(--mouse-x) var(--mouse-y), 
-                rgba(255, 255, 255, 0.073),
+                400px circle at var(--mouse-x) var(--mouse-y), 
+                rgba(255, 255, 255, 0.473),
                 transparent 40%
             );
             z-index: 3;
             }
 
-            &::after {  
-            background: radial-gradient(
-                600px circle at var(--mouse-x) var(--mouse-y), 
-                rgba(255, 255, 255, 0.4),
-                transparent 40%
-            );
-            z-index: 1;
-            }
         }
 }
 
@@ -152,11 +145,21 @@
             background:linear-gradient(45deg,#A43996,#FED523); 
         }
 }
+
+.linkedin {
+    &::before {
+        background: linear-gradient(90deg, #0A66C2 0%, rgb(128, 185, 255) 100%);
+    }
+
+}
 }
 
 @media (max-width: 800px) {
   .cards {
     flex-direction: column;
     gap: 20px;
+    margin: 0;
+    grid-template-columns: repeat(1, auto);
+    margin-bottom: 80px;
   }
 }

@@ -551,3 +551,143 @@ img {
             }
         }
     }
+
+@media screen and (max-width: 420px){
+
+    .marquee {
+        transform: rotate(345deg) translate(-148px, -616px);
+    }
+
+    .homepage_text {
+        h1 {
+            font-size: 64px;
+        }
+    }
+
+    .banner {
+        width: 90vw;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 64px !important;
+            padding-top: 10px;
+        }
+
+        p {
+            font-size: 32px !important;
+        }
+    }
+
+    .swiper-thumbs {
+        margin: 0 19px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) and (min-width: 420px){
+        .marquee {
+        transform: rotate(344deg) translate(-148px, -616px);
+    }
+
+    .homepage_text {
+        h1 {
+            font-size: 64px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+        .marquee {
+        transform: rotate(349deg) translate(-148px, -415px);
+    }
+
+    .homepage_text {
+        h1 {
+            font-size: 64px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+        .marquee {
+        transform: rotate(349deg) translate(-148px, -415px);
+    }
+
+    .homepage_text {
+        h1 {
+            font-size: 64px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+        .marquee {
+        transform: rotate(354deg) translate(-148px, -250px);
+    }
+
+    .homepage_text {
+        h1 {
+            font-size: 96px;
+        }
+    }
+    
+}
+
+@media screen  and (max-width: 768px){
+    .cursor-follower {
+        display: none;
+    }
+    .cursor-follower-inner {
+        display: none;
+    }
+
+     main {
+        width: 100%;
+    }
+    .circle {
+        transform: translateX(0);
+    }
+
+        .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .about_text {
+
+            h1 {
+                text-align: center;
+                width: 100%;
+            }
+
+        p {
+            font-size: 18px;
+            padding: 15px;
+        }
+        }
+        
+    }
+
+    .contact {
+        padding: 300px 0 0;
+
+        .contact_ways {
+            flex-direction: column;
+            margin: 0 15px 0;
+
+            .wpcf7 {
+                input {
+                    width: 335px;
+                }
+            }
+
+        }
+
+        .contact_links {
+            width: 90%;
+        }
+    }
+}
