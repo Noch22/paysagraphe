@@ -105,11 +105,12 @@ $gallery = get_field("gallery", 'options');
                                         ?>
                                         
                                             <div class="swiper-slide">
-                                            <a href="<?=$link?>" class="project_link">
+
                                                 <h1 class="slider_text_title"><?= $title ?></h1>
                                                 <p class="slider_text_additional"><?= $add_text ?></p>
+                                                <a href="<?=$link?>" class="slider_link">Découvrir</a>
                                                 <img width="<?= $cover['sizes']['cover_image-width'] ?>" height="<?= $cover['sizes']['cover_image-height'] ?>" src="<?= $cover['sizes']['cover_image'] ?>" alt="<?= $cover['alt'] ?>">
-                                            </a>                                           
+                                                                                 
                                             </div>
                                         
                                         <?php

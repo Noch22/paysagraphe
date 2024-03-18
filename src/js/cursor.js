@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const cursorHeight = cursorFollower.offsetHeight; // Hauteur du curseur
       const innerWidth = cursorInner.offsetWidth; // Largeur du curseur interne
       const innerHeight = cursorInner.offsetHeight; // Hauteur du curseur interne
-      cursorFollower.style.transform = `translate(${mouseX - cursorWidth / 2}px, ${mouseY - cursorHeight / 2}px)`;
+       const coefficient = 1; // Modifiez ce coefficient selon la vitesse souhaitée
+  cursorFollower.style.transform = `translate(${(mouseX - cursorWidth / 2) * coefficient}px, ${(mouseY - cursorHeight / 2) * coefficient}px)`;
     });
 
     document.addEventListener("scroll", function () {
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const cursorHeight = cursorFollower.offsetHeight; // Hauteur du curseur
       const innerWidth = cursorInner.offsetWidth; // Largeur du curseur interne
       const innerHeight = cursorInner.offsetHeight; // Hauteur du curseur interne
-      cursorFollower.style.transform = `translate(${mouseX - cursorWidth / 2}px, ${mouseY - cursorHeight / 2}px)`;
+      const coefficient = 1; // Modifiez ce coefficient selon la vitesse souhaitée
+      cursorFollower.style.transform = `translate(${(mouseX - cursorWidth / 2) * coefficient}px, ${(mouseY - cursorHeight / 2) * coefficient}px)`;
     });
 
     const images = document.querySelectorAll("img");
@@ -44,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
         cursorInner.style.backgroundImage = `url('https://i.ibb.co/cv0WsPc/curseur-see.gif')`;
-        cursorInner.style.width = "80px";
-        cursorInner.style.height = "80px";
+        cursorInner.style.width = "100px";
+        cursorInner.style.height = "100px";
         cursorInner.style.backgroundSize = "80px";
     });
 
@@ -61,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
 if(footer){
     footer.addEventListener("mouseenter", () => {
       cursorInner.style.backgroundImage = `url('https://i.ibb.co/jDfQWgh/see-youv2.gif')`;
-      cursorInner.style.width = "160px";
-      cursorInner.style.height = "160px";
-      cursorInner.style.backgroundSize = "125px";
+      cursorInner.style.width = "100px";
+      cursorInner.style.height = "100px";
+      cursorInner.style.backgroundSize = "80px";
   });
 
     footer.addEventListener("mouseleave", () => {

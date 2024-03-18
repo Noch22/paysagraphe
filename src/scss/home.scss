@@ -370,11 +370,36 @@ img {
     .slider_text_additional {
       position: absolute;
       bottom: 15px;
-      right: 15px;
+      left: 10px;
       font-family: "Gotham Thin" !important;
       font-size: 48px !important;
       color: white;
       font-style: italic;    
+    }
+
+    .slider_link {
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+        font-family: "Gotham black" !important;
+        text-transform: uppercase;
+        padding: 15px;
+        font-size: 48px !important;
+        background-color: white;
+        color: #141414;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+
+        &:hover {
+            background-color: #141414;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
     }
 
 
@@ -693,5 +718,13 @@ img {
         .contact_links {
             width: 90%;
         }
+    }
+
+    .slider_link {
+        font-size: 24px !important;
+    }
+
+    .slider_text_additional {
+        bottom: 85px;
     }
 }
