@@ -5,3 +5,47 @@
 @import url(scss/footer.scss);
 @import url(scss/projet.scss);
 @import url(scss/bento.scss);
+
+
+.main {
+    color: white;
+    margin: 20px 0;
+    font-family: "Gotham";
+    max-width: 1024px;
+    margin: 50px auto 0;
+
+    h1 {
+        font-family: "Gotham black";
+        font-size: 32px;
+    }
+
+    h2 {
+        font-family: "Gotham black";
+        font-size: 24px;
+    }
+
+    p {
+        font-family: "Gotham";
+    }
+
+    ul {
+        list-style: circle;
+        
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+}
+
+
+@media screen  and (max-width: 768px){
+
+
+    .main {
+        padding: 0 20px;
+    }
+
+
+}

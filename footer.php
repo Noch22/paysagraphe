@@ -29,7 +29,8 @@
     </div>
     <div class="bottom_footer">
         <div class="left_bottom_footer">
-            <a href="">Mentions légales</a>
+        <?php $mentions = get_field("page_mentions_legales", "options") ?>
+            <a href="<?= $mentions ?>">Mentions légales</a>
         </div>
         <div class="right_bottom_footer">
             <h3>France, <?= do_shortcode('[year]')?></h3>
