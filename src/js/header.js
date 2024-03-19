@@ -18,7 +18,13 @@ burgers.forEach(item => {
 
 const gradientBox = document.querySelector('.gradient');
 
+ window.matchMedia("(max-width: 768px)").matches ? 
+
 tl.to(gradientBox, {
+    duration: 1, // Durée de l'animation en secondes
+    ease: 'power2.inOut', // Facilité d'animation (vous pouvez ajuster cela selon vos préférences)
+    yoyo: true // Faire l'animation en sens inverse à la fin
+}) : tl.to(gradientBox, {
     duration: 10, // Durée de l'animation en secondes
     background: 'linear-gradient(135deg, #ffcc00, #ff6699)', // Nouveau dégradé
     ease: 'power2.inOut', // Facilité d'animation (vous pouvez ajuster cela selon vos préférences)
@@ -53,13 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: "power4.inOut",
     });
 
+    if(window.matchMedia("(max-width: 768px)").matches){ 
+    gsap.set(".menu-item p", { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" });
     timeline.to(".menu-item p", {
+        duration: 1.5,
+        y: 0,
+        stagger: 0.2,
+        ease: "power4.out",
+    }, "-=1")} else {timeline.to(".menu-item p", {
         duration: 1.5,
         y: 0,
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         stagger: 0.2,
         ease: "power4.out",
     }, "-=1");
+    }
 
 
 if(togglebutton){
