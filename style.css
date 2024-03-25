@@ -6,6 +6,6 @@
 */
 .grecaptcha-badge { visibility: hidden; }
 
-* {
-    cursor: none;
+body {
+    cursor: none !important;
 }
