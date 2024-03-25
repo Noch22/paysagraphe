@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 1.5,
         y: 0,
         stagger: 0.2,
+        opacity: 1,
         ease: "power4.out",
     }, "-=1")} else {timeline.to(".menu-item p", {
         duration: 1.5,
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         stagger: 0.2,
         ease: "power4.out",
+        opacity: 1,
     }, "-=1");
     }
 

@@ -32,22 +32,25 @@
 .layout_texte {
     color: white;
     margin: 20px 0;
-    font-family: "Gotham";
+    font-family: "Gotham", sans-serif;
     max-width: 1024px;
     margin: 50px auto 0;
 
     h1 {
-        font-family: "Gotham black";
+        font-family: "Gotham", sans-serif;;
+        font-weight: 800;
         font-size: 32px;
     }
 
     h2 {
-        font-family: "Gotham black";
+        font-family: "Gotham", sans-serif;;
+        font-weight: 800;
         font-size: 24px;
     }
 
     p {
-        font-family: "Gotham";
+        font-family: "Gotham", sans-serif;;
+        font-weight: 400;
     }
 
     ul {
