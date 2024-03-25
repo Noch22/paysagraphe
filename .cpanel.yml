@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/noahbuis/v2.noahbuisson.fr/wp-content/themes/noahbuisson
-    - /bin/cp -fr * $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
     
