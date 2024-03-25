@@ -5,3 +5,7 @@
  Author URI: https://noahbuisson.fr
 */
 .grecaptcha-badge { visibility: hidden; }
+
+* {
+    cursor: none;
+}
