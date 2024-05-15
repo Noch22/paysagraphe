@@ -77,10 +77,10 @@ $gallery = get_field("gallery", 'options');
                     <h1>Noah Buisson</h1>
                 </div>
                 <div class="marquee">
-                    <p>Photographe • Developper •</p>
-                    <p>Photographe • Developper •</p>
-                    <p>Photographe • Developper •</p>
-                    <p>Photographe • Developper •</p>
+                    <p>Photographe • Développeur •</p>
+                    <p>Photographe • Développeur •</p>
+                    <p>Photographe • Développeur •</p>
+                    <p>Photographe • Développeur •</p>
                 </div>
                 <?php get_header(); ?>
                 <main>
