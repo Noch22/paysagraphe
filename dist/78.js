@@ -1,1 +1,0 @@
-"use strict";(()=>{(self.webpackChunkwp_theme=self.webpackChunkwp_theme||[]).push([[78],{78:function(o,n,e){e.r(n),e.d(n,{default:function(){return u}});class u{init(){console.log("init common")}}}}]);})();

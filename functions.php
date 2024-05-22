@@ -35,41 +35,10 @@ function d($args){
   p($args);
   die();
 }
-add_image_size( 'cover_image', 1280, 720, array( 'center', 'center' ) );
-add_image_size( 'cover_thumbnail', 60, 60, array( 'center', 'center' ) );
-add_theme_support( 'title-tag' );
-add_theme_support( 'custom-logo', [
-  'height' => 200,
-  'width' => 200,
-  'flex-height' => true,
-	'flex-width' => true,
-  ]);
 
 function custom_js_import() {
   ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/2030674e04.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.hoverintent/1.10.1/jquery.hoverIntent.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/gotham-fonts@1.0.3/css/gotham-rounded.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js"></script>
   <?php
 }
 add_action('wp_head', 'custom_js_import');
-
-
-function currentYear(){
-  return date('Y');
-}
-add_shortcode( 'year', 'currentYear' );
-
-
-add_action( 'wp_head', 'add_viewport_meta_tag' , '1' );
-
-function add_viewport_meta_tag() {
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-}
