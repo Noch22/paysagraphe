@@ -1,44 +1,4 @@
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./src/main.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap);
-/*!******************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./src/main.scss (1) ***!
-  \******************************************************************************************************************************************************************************************************************************************/
-*, *:before, *:after{
-    box-sizing: border-box;
-  }html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: none;
-       -moz-text-size-adjust: none;
-            text-size-adjust: none;
-  }footer, header, nav, section, main{
-    display: block;
-  }body{
-    line-height: 1;
-    scroll-behavior: smooth;
-
-  }ol, ul{
-    list-style: none;
-  }blockquote, q{
-    quotes: none;
-  }blockquote:before, blockquote:after, q:before, q:after{
-    content: '';
-    content: none;
-  }table{
-    border-collapse: collapse;
-    border-spacing: 0;
-  }input{
-    -webkit-appearance: none;
-    border-radius: 0;
-  }.hero {
+.hero {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,7 +44,8 @@
             width: 200px;
         }
     }
-}.projects {
+}
+.projects {
     .projects_title {
         margin: 15px;
         display: flex;
@@ -163,8 +124,7 @@
                 width: 100%;
                 height: 100%;
                 max-height: 530px;
-                -o-object-fit: cover;
-                   object-fit: cover;
+                object-fit: cover;
                 border-radius: 15px;
             }
 
@@ -201,44 +161,14 @@
             margin: 15px 0;
         }
     }
-}@keyframes marquee {
+}
+
+
+@keyframes marquee {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-100%);
     }
-}:root {
-    --primary-color: #14492C;
-    --secondary-color: #E7E5E5;
-    --dark-color: #343a40;
-    --complementary-color: #FE5E41;
-    --logo-color: #BFD65A;
-    --white: #FFFFFF;
-    --title: 64px;
-    --subtitle: 40px;
-    --cta: 32px;
-    --primary-font: 'Merriweather', serif;
-    --secondary-font: 'Quicksand', sans-serif;
-    overflow-x: hidden;
-}hr {
-    color: #AEAEAE;
-}.cta {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    font-size: var(--cta);
-
-    &:hover {
-        background-color: var(--complementary-color);
-        color: var(--secondary-color);
-        transition: all 0.3s ease-in-out;
-    }
 }
-
-/*# sourceMappingURL=main.css.map*/

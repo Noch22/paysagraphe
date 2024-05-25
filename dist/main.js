@@ -985,6 +985,71 @@ module.exports = function(urlString) {
 
 /***/ }),
 
+/***/ "./node_modules/postcss/lib/list.js":
+/*!******************************************!*\
+  !*** ./node_modules/postcss/lib/list.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+"use strict";
+
+let list = {
+  split(string, separators, last) {
+    let array = [];
+    let current = "";
+    let split = false;
+    let func = 0;
+    let inQuote = false;
+    let prevQuote = "";
+    let escape = false;
+    for (let letter of string) {
+      if (escape) {
+        escape = false;
+      } else if (letter === "\\") {
+        escape = true;
+      } else if (inQuote) {
+        if (letter === prevQuote) {
+          inQuote = false;
+        }
+      } else if (letter === '"' || letter === "'") {
+        inQuote = true;
+        prevQuote = letter;
+      } else if (letter === "(") {
+        func += 1;
+      } else if (letter === ")") {
+        if (func > 0)
+          func -= 1;
+      } else if (func === 0) {
+        if (separators.includes(letter))
+          split = true;
+      }
+      if (split) {
+        if (current !== "")
+          array.push(current.trim());
+        current = "";
+        split = false;
+      } else {
+        current += letter;
+      }
+    }
+    if (last || current !== "")
+      array.push(current.trim());
+    return array;
+  },
+  space(string) {
+    let spaces = [" ", "\n", "	"];
+    return list.split(string, spaces);
+  },
+  comma(string) {
+    return list.split(string, [","], true);
+  }
+};
+module.exports = list;
+list.default = list;
+
+
+/***/ }),
+
 /***/ "./node_modules/webpack-dev-server/client/clients/WebSocketClient.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/webpack-dev-server/client/clients/WebSocketClient.js ***!
@@ -3275,6 +3340,49 @@ module.exports.formatError = function(err) {
 
 /***/ }),
 
+/***/ "./src/js/home.js":
+/*!************************!*\
+  !*** ./src/js/home.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+const { space } = __webpack_require__(/*! postcss/lib/list */ "./node_modules/postcss/lib/list.js");
+const swiper = new Swiper(".hero-slide", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  effect: "fade"
+});
+const projets = new Swiper(".projects_container", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: "auto",
+  spaceBetween: 35,
+  centeredSlides: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".projet_next",
+    prevEl: ".projet_previous"
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar"
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  }
+});
+
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -3285,7 +3393,10 @@ module.exports.formatError = function(err) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ "./src/main.scss");
 /* harmony import */ var _utils_Router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/Router */ "./src/utils/Router.js");
+/* harmony import */ var _js_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/home */ "./src/js/home.js");
+/* harmony import */ var _js_home__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_home__WEBPACK_IMPORTED_MODULE_2__);
 __webpack_require__.p = window.WP.publicPath;
+
 
 
 const routes = {
@@ -3453,7 +3564,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1716408732529
+      // 1716676615721
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3578,7 +3689,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("1afc79f8c40cb3a61b61")
+/******/ 		__webpack_require__.h = () => ("2d0520bbd8ffa7d81f55")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

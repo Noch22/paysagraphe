@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #14492C;
+    --secondary-color: #E7E5E5;
+    --dark-color: #343a40;
+    --complementary-color: #FE5E41;
+    --logo-color: #BFD65A;
+    --white: #FFFFFF;
+    --title: 64px;
+    --subtitle: 40px;
+    --cta: 32px;
+    --primary-font: 'Merriweather', serif;
+    --secondary-font: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    color: #AEAEAE;
+}
+
+
+.cta {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--cta);
+
+    &:hover {
+        background-color: var(--complementary-color);
+        color: var(--secondary-color);
+        transition: all 0.3s ease-in-out;
+    }
+}
