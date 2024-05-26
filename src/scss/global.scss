@@ -35,3 +35,20 @@ hr {
         transition: all 0.3s ease-in-out;
     }
 }
+
+.cta_secondary {
+    background-color: var(--complementary-color);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--cta);
+
+    &:hover {
+        background-color: var(--logo-color);
+        transition: all 0.3s ease-in-out;
+    }
+}

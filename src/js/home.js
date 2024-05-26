@@ -1,6 +1,6 @@
 const { space } = require("postcss/lib/list");
 
-const swiper = new Swiper('.hero-slide', {
+const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -20,7 +20,7 @@ const swiper = new Swiper('.hero-slide', {
     loop: false,
     slidesPerView: 'auto',
     spaceBetween: 35,
-    centeredSlides:false,
+    centeredSlides: false,
     
   
     // Navigation arrows
@@ -34,6 +34,7 @@ const swiper = new Swiper('.hero-slide', {
 
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
+        delay: 5000,
       },
   });

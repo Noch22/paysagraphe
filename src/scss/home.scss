@@ -163,6 +163,80 @@
     }
 }
 
+.about {
+    margin: 100px 0 0 0;
+
+    & > svg {
+        position: absolute;
+    }
+    .about_title {
+        z-index: 99;
+        position: relative;
+        text-align: right;
+        padding: 150px 10px 0;
+        h2 {
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: var(--title);
+            color: var(--white);
+        }
+    }
+
+    .about_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 100px 0 50px;
+
+        .about_text {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+            h3 {
+                font-family: var(--primary-font);
+                font-weight: 400;
+                font-size: 54px;
+                color: var(--white);
+            }
+
+            p {
+                font-family: var(--secondary-font);
+                color: var(--white);
+                width: 80%;
+                line-height: 25px;
+                padding: 15px 0;
+            }
+        }
+        .about_image {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            img {
+                min-height: 560px;
+                max-height: 560px;
+                height: 560px;
+                width: 560px;
+                max-width: 560px;
+                vertical-align: top;
+                object-fit: cover;
+                border-radius: 15px;
+                position: relative;
+            }
+        }
+    }
+
+    #bottom_shape {
+        transform: translateY(-1px);
+    }
+}
 
 @keyframes marquee {
     0% {

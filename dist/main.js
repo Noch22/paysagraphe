@@ -3347,7 +3347,7 @@ module.exports.formatError = function(err) {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 const { space } = __webpack_require__(/*! postcss/lib/list */ "./node_modules/postcss/lib/list.js");
-const swiper = new Swiper(".hero-slide", {
+const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -3376,7 +3376,8 @@ const projets = new Swiper(".projects_container", {
   },
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false
+    disableOnInteraction: true,
+    delay: 5e3
   }
 });
 
@@ -3564,7 +3565,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1716676615721
+      // 1716754357178
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3689,7 +3690,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("2d0520bbd8ffa7d81f55")
+/******/ 		__webpack_require__.h = () => ("ba5d0a9066f7f66f71eb")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

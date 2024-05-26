@@ -102,7 +102,27 @@ wp_head();
         </section>
 
         <section class="about">
-                    <br><br><br><br>
+            <svg viewBox="0 0 1440 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M210.5 139.101C55.7 141.247 5 200.367 -1 229.659V274.938H1593C1574.5 173.424 1534.9 -23.2328 1524.5 2.25763C1511.5 34.1206 1393 52.5676 1300.5 41.164C1208 29.7604 1128.5 18.0214 1023.5 81.412C918.5 144.803 649 75.7102 503 81.412C357 87.1138 404 136.418 210.5 139.101Z" fill="#14492C"/>
+            </svg>
+            <div class="about_title">
+                <h2>À propos</h2>
+                <hr>
+            </div>
+            <div class="about_content">
+                <div class="about_image">
+                    <?php $image= get_field('image_a_propos', 'option'); ?>
+                    <img src="<?= $image['sizes']['large'] ?>" alt="<?= $image["alt"]?>">
+                </div>
+                <div class="about_text">
+                    <h3>Ashley Martinez</h3>
+                    <p><?= get_field('description_a_propos', 'option') ?></p>
+                    <a href="" class="cta_secondary">En découvrir d'avantage</a>
+                </div>
+            </div>
+            <svg viewBox="0 0 1440 265" fill="none" xmlns="http://www.w3.org/2000/svg" id="bottom_shape">
+                <path d="M543.783 214.633C340.198 242.449 112.602 180.083 6.05725 105.711L-130 0.30249L1671 0.302525C1680.84 60.8148 1676.06 151.681 1527.2 128.257C1341.12 98.9766 1175.55 237.179 1004.48 261.189C833.405 285.198 747.369 186.817 543.783 214.633Z" fill="#14492C"/>
+            </svg>
         </section>
 
     </main>

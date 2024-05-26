@@ -201,6 +201,80 @@
             margin: 15px 0;
         }
     }
+}.about {
+    margin: 100px 0 0 0;
+
+    & > svg {
+        position: absolute;
+    }
+    .about_title {
+        z-index: 99;
+        position: relative;
+        text-align: right;
+        padding: 150px 10px 0;
+        h2 {
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: var(--title);
+            color: var(--white);
+        }
+    }
+
+    .about_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 100px 0 50px;
+
+        .about_text {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+            h3 {
+                font-family: var(--primary-font);
+                font-weight: 400;
+                font-size: 54px;
+                color: var(--white);
+            }
+
+            p {
+                font-family: var(--secondary-font);
+                color: var(--white);
+                width: 80%;
+                line-height: 25px;
+                padding: 15px 0;
+            }
+        }
+        .about_image {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            img {
+                min-height: 560px;
+                max-height: 560px;
+                height: 560px;
+                width: 560px;
+                max-width: 560px;
+                vertical-align: top;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                border-radius: 15px;
+                position: relative;
+            }
+        }
+    }
+
+    #bottom_shape {
+        transform: translateY(-1px);
+    }
 }@keyframes marquee {
     0% {
         transform: translateX(0);
@@ -237,6 +311,21 @@
     &:hover {
         background-color: var(--complementary-color);
         color: var(--secondary-color);
+        transition: all 0.3s ease-in-out;
+    }
+}.cta_secondary {
+    background-color: var(--complementary-color);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--cta);
+
+    &:hover {
+        background-color: var(--logo-color);
         transition: all 0.3s ease-in-out;
     }
 }
