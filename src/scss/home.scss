@@ -46,8 +46,10 @@
     }
 }
 .projects {
-    .projects_title {
+    .projects_title_container {
         margin: 15px;
+    }
+    .projects_title {
         display: flex;
         justify-content: space-between;
         h2 {
@@ -165,8 +167,9 @@
 
 .about {
     margin: 100px 0 0 0;
+    position: relative;
 
-    & > svg {
+    & > svg:first-of-type {
         position: absolute;
     }
     .about_title {
@@ -235,6 +238,73 @@
 
     #bottom_shape {
         transform: translateY(-1px);
+    }
+}
+
+.prestations {
+    .prestations_title {
+        margin: 15px;
+    }
+
+    .prestations_container {
+        padding: 60px 15px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        .prestation {
+            margin: 0 15px;
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 25px;
+            border-radius: 15px;
+
+            .prestation_single_title {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+            }
+            h3 {
+                font-family: var(--primary-font);
+                text-transform: capitalize;
+                font-size: var(--prestation);
+                margin-left: 15px;
+            }
+
+            i {
+                font-size: 36px;
+            }
+
+            p {
+                padding: 25px 0;
+                font-family: var(--secondary-font);
+                font-size: 20px;
+                text-align: left;
+                line-height: 22.5px;
+                word-break: keep-all;
+            }
+        }
+    }
+}
+
+.devis {
+    position: relative;
+    .devis_title {
+        margin: 15px;
+        position: relative;
+        padding-top: 125px;
+        text-align: right;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+    }
+
+    .devis_content {
+        position: relative;
+        background-color: var(--complementary-color);
     }
 }
 

@@ -41,6 +41,7 @@ function custom_js_import() {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/2030674e04.js" crossorigin="anonymous"></script>
   <?php
 }
 add_action('wp_head', 'custom_js_import');

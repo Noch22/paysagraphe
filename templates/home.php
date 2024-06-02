@@ -30,24 +30,26 @@ wp_head();
         </svg>
 
         <section class="projects">
-            <div class="projects_title">
-                <h2>Mes projets</h2>
-                <div class="nav">
-                        <a class="projet_previous">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30C55 43.8071 43.8071 55 30 55Z" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M35 20L25 30L35 40" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a class="projet_next">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5C16.1929 5 5 16.1929 5 30C5 43.8071 16.1929 55 30 55Z" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M25 20L35 30L25 40" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+            <div class="projects_title_container">
+                <div class="projects_title">
+                    <h2>Mes projets</h2>
+                        <div class="nav">
+                                <a class="projet_previous">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30C55 43.8071 43.8071 55 30 55Z" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M35 20L25 30L35 40" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                                <a class="projet_next">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5C16.1929 5 5 16.1929 5 30C5 43.8071 16.1929 55 30 55Z" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M25 20L35 30L25 40" stroke="#FE5E41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                        </div>
                 </div>
+                <hr>
             </div>
-            <hr>
             <div class="projects_container">
                 <div class="swiper-wrapper">
                 <?php
@@ -123,6 +125,46 @@ wp_head();
             <svg viewBox="0 0 1440 265" fill="none" xmlns="http://www.w3.org/2000/svg" id="bottom_shape">
                 <path d="M543.783 214.633C340.198 242.449 112.602 180.083 6.05725 105.711L-130 0.30249L1671 0.302525C1680.84 60.8148 1676.06 151.681 1527.2 128.257C1341.12 98.9766 1175.55 237.179 1004.48 261.189C833.405 285.198 747.369 186.817 543.783 214.633Z" fill="#14492C"/>
             </svg>
+        </section>
+
+        <section class="prestations">
+            <div class="prestations_title">
+                <h2 class="primary_text_color">Mes prestations</h2>
+                <hr>
+            </div>
+
+            <div class="prestations_container">
+                <?php
+                    $prestations = get_field('prestations', 'option');
+                    if($prestations){
+                        foreach($prestations as $prestation){
+                            ?>
+                            <div class="prestation">
+                                <div class="prestation_single_title">
+                                    <?= $prestation['icone'] ?>
+                                    <h3><?= $prestation['titre'] ?></h3>
+                                </div>
+                                <p><?= $prestation['description'] ?></p>
+                            </div>
+                                <?php
+                        }}
+                ?>
+            </div>
+        </section>
+
+        <section class="devis">
+            <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M932.889 46.7203C1105.72 16.1791 1379.96 2.84792 1495.48 0L1553.82 189.5C983.224 205.542 -99.4774 201.267 -114.28 189.5C-132.783 174.792 210.273 74.1901 333.793 84.1397C457.313 94.0894 716.854 84.8968 932.889 46.7203Z" fill="#FE5E41"/>
+            </svg>
+            <div class="devis_title">
+                <h2 class="primary_text">Demander un devis</h2>
+                <hr>
+            </div>
+            <div class="devis_content">
+                <p>testsetestestest</p>
+                <?= do_shortcode('[contact-form-7 id="ef51c2d" title="Formulaire de contact 1"]') ?>
+            </div>
+
         </section>
 
     </main>

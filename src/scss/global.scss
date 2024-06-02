@@ -8,6 +8,7 @@
     --title: 64px;
     --subtitle: 40px;
     --cta: 32px;
+    --prestation: 24px;
     --primary-font: 'Merriweather', serif;
     --secondary-font: 'Quicksand', sans-serif;
     overflow-x: hidden;
@@ -15,6 +16,8 @@
 
 hr {
     color: #AEAEAE;
+    z-index: 99;
+    position: relative;
 }
 
 
@@ -51,4 +54,18 @@ hr {
         background-color: var(--logo-color);
         transition: all 0.3s ease-in-out;
     }
+}
+
+.primary_text {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: var(--title);
+    color: var(--white);
+}
+
+.primary_text_color {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: var(--title);
+    color: var(--primary-color);
 }
