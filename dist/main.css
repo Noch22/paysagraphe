@@ -329,17 +329,51 @@
     .devis_title {
         margin: 15px;
         position: relative;
-        padding-top: 125px;
         text-align: right;
+        z-index: 99;
+        padding: 75px 10px 0;
     }
     svg {
         position: absolute;
         top: 0;
-    }
+        }
 
     .devis_content {
         position: relative;
         background-color: var(--complementary-color);
+
+        .wpcf7 {
+            display: flex;
+            justify-content: center;
+
+            .name {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                &>p {
+                    display: flex;
+                    width: 150px;
+                    
+                    &:first-of-type {
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            & input {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                margin: 0 0 15px 0;
+            }
+
+            & label {
+                font-family: var(--primary-font);
+                color: var(--white);
+                font-size: 24px;
+            }
+        }
     }
 }@keyframes marquee {
     0% {

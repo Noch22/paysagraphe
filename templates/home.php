@@ -153,15 +153,15 @@ wp_head();
         </section>
 
         <section class="devis">
-            <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M932.889 46.7203C1105.72 16.1791 1379.96 2.84792 1495.48 0L1553.82 189.5C983.224 205.542 -99.4774 201.267 -114.28 189.5C-132.783 174.792 210.273 74.1901 333.793 84.1397C457.313 94.0894 716.854 84.8968 932.889 46.7203Z" fill="#FE5E41"/>
+            <svg viewBox="0 0 1440 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M932.889 46.7203C1105.72 16.1791 1379.96 2.84792 1495.48 0L1545.5 191C1085 191 -66.5 189.5 -114.28 189.5C-137.916 189.5 210.273 74.1901 333.793 84.1397C457.313 94.0894 716.854 84.8968 932.889 46.7203Z" fill="#FE5E41"/>
             </svg>
+
             <div class="devis_title">
                 <h2 class="primary_text">Demander un devis</h2>
                 <hr>
             </div>
             <div class="devis_content">
-                <p>testsetestestest</p>
                 <?= do_shortcode('[contact-form-7 id="ef51c2d" title="Formulaire de contact 1"]') ?>
             </div>
 
