@@ -162,7 +162,7 @@ wp_head();
                 <hr>
             </div>
             <div class="devis_content">
-                <?= do_shortcode('[contact-form-7 id="ef51c2d" title="Formulaire de contact 1"]') ?>
+                <?= do_shortcode('[contact-form-7 id="ef51c2d" title="Demande de devis"]') ?>
             </div>
 
         </section>

@@ -3380,6 +3380,13 @@ const projets = new Swiper(".projects_container", {
     delay: 5e3
   }
 });
+const slideValue = document.querySelector(".sliderValue span");
+const inputSlider = document.querySelector(".field input");
+inputSlider.oninput = () => {
+  let value = inputSlider.value;
+  value == 2e3 ? slideValue.textContent = "+ de 2000\u20AC" : slideValue.textContent = value + "\u20AC";
+  slideValue.style.left = value * 100 / 2e3 + "%";
+};
 
 
 /***/ }),
@@ -3565,7 +3572,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1717970676839
+      // 1718145984016
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3690,7 +3697,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("680ab42cc916bb775caf")
+/******/ 		__webpack_require__.h = () => ("72264fd3f0f787a1d20c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

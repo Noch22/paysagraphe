@@ -38,3 +38,13 @@ const swiper = new Swiper('.swiper', {
         delay: 5000,
       },
   });
+
+
+const slideValue = document.querySelector(".sliderValue span");
+const inputSlider = document.querySelector(".field input");
+
+inputSlider.oninput =(()=>{
+  let value = inputSlider.value;
+  value == 2000 ? slideValue.textContent = "+ de 2000€" : slideValue.textContent = value + "€";
+  slideValue.style.left = (value*100/2000) + "%";
+})
