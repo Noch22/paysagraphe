@@ -1,2 +1,2 @@
-changer noms des champs cf7 
-modifier message envoyé etc
+revoir espacement footer
+page a propos

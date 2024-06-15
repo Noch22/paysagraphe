@@ -42,6 +42,7 @@ function custom_js_import() {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/2030674e04.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
   <?php
 }
 add_action('wp_head', 'custom_js_import');

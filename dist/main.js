@@ -3382,11 +3382,32 @@ const projets = new Swiper(".projects_container", {
 });
 const slideValue = document.querySelector(".sliderValue span");
 const inputSlider = document.querySelector(".field input");
-inputSlider.oninput = () => {
-  let value = inputSlider.value;
-  value == 2e3 ? slideValue.textContent = "+ de 2000\u20AC" : slideValue.textContent = value + "\u20AC";
-  slideValue.style.left = value * 100 / 2e3 + "%";
-};
+if (inputSlider) {
+  inputSlider.oninput = () => {
+    let value = inputSlider.value;
+    value == 2e3 ? slideValue.textContent = "+ de 2000\u20AC" : slideValue.textContent = value + "\u20AC";
+    slideValue.style.left = value * 100 / 2e3 + "%";
+  };
+}
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  // https://www.desmos.com/calculator/brs54l4xou
+  direction: "vertical",
+  // vertical, horizontal
+  gestureDirection: "vertical",
+  // vertical, horizontal, both
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false
+});
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 
 /***/ }),
@@ -3572,7 +3593,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1718284492066
+      // 1718490153067
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3697,7 +3718,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("e8c218f67ffcecee5eab")
+/******/ 		__webpack_require__.h = () => ("abf892f5f34943743b99")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

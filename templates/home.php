@@ -164,9 +164,50 @@ wp_head();
             <div class="devis_content">
                 <?= do_shortcode('[contact-form-7 id="ef51c2d" title="Demande de devis"]') ?>
             </div>
-
+            <svg viewBox="0 0 1440 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M231.986 49.1783C91.9912 71.8159 -37.5043 60.2629 -159 37.1569L-75.5029 0H1514.94C1528.94 8.69076 1558.14 30.6935 1562.94 49.1783C1568.94 72.2843 1126.77 128.118 934.462 68.069C813.466 30.2876 413.203 19.8751 231.986 49.1783Z" fill="#FE5E41"/>
+            </svg>
         </section>
 
+        <section class="contact">
+            <div class="contact_title">
+                <h2 class="primary_text_color">Me contacter</h2>
+                <hr>
+            </div>
+            <div class="contact_content">
+                <div class="left">
+                    <?php echo do_shortcode('[contact-form-7 id="c092260" title="Formulaire de contact"]') ?>
+                </div>
+                <div class="right">
+                    <ul>
+                        <?php 
+                        $liens = get_field('reseaux_sociaux', 'options');
+                        if($liens){
+                            foreach($liens as $lien){
+                                ?>
+                                <li>
+                                    <a href="<?= $lien['lien_vers_le_profil'] ?>" target="_blank">
+                                        <?= $lien['icone'] . ' ' . $lien['nom_du_reseaux'] ?>
+                                    </a>
+                                </li>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<script>
+    function closePopup() {
+    document.querySelector(".pop-up-send").style.display = "none";
+    console.log("close");
+}
+</script>
     </main>
 <?php
 get_footer();

@@ -1,0 +1,24 @@
+.apropos {
+    .apropos_title {
+        background-color: var(--primary-color);
+        z-index: 1;
+        position: relative;
+        padding: 25px 32px 0;
+    }
+    svg:first-of-type {
+        position: relative;
+        transform: translateY(-10px);
+        z-index: 0;
+    }
+
+    .apropos_content {
+        padding: 25px 32px;
+
+        p {
+            font-family: var(--secondary-font);
+            color: var(--primary-color);
+            font-size: 32px;
+            padding: 15px 0;
+        }
+    }
+}
