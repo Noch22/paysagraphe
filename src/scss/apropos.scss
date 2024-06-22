@@ -21,4 +21,90 @@
             padding: 15px 0;
         }
     }
+
+    .recompenses {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 0;
+        }
+        .recompenses_title {
+            position: relative;
+            padding: 180px 10px 0;
+        }   
+        
+        .recompenses_content {
+            background-color: var(--primary-color);
+            padding: 100px 10px;
+            margin: -30px 0 0;
+
+            .recompense_single {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+
+                .recompense_single_text {
+                    width: 70%;
+                    padding: 0 15px;
+                }
+
+                .recompense_single_image {
+                    width: 30%;
+                    padding: 0 15px;
+                }
+
+                h3 {
+                    font-family: var(--primary-font);
+                    color: var(--white);
+                    text-transform: uppercase;
+                    font-size: 48px;
+                    padding: 15px 0;
+                
+                }
+                
+                p {
+                    font-family: var(--secondary-font);
+                    color: var(--white);
+                    font-size: 24px;
+                    padding: 15px 0;
+                }
+
+                img {
+                    max-width: 300px;
+                    min-width: 300px;
+                    min-height: 300px;
+                    max-height: 300px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                
+                }
+            }
+
+            .recompense_single:nth-child(even) {
+                flex-direction: row-reverse;
+
+                .recompense_single_text {
+                    text-align: right;
+                }
+            }
+
+            .recompense_single:nth-child(odd) {
+                flex-direction: row;
+
+                .recompense_single_text {
+                    text-align: left;
+                }
+
+                .recompense_single_image {
+
+                    img {
+                        float: right;
+                    }
+                    
+                }
+            }
+        }
+    }
 }

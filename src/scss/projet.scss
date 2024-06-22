@@ -1,0 +1,27 @@
+.projet {
+    position: relative;
+    svg {
+        position: absolute;
+        top: 150px;
+    }
+
+    .projet_title {
+        background-color: var(--primary-color);
+        padding: 50px 10px;
+
+        h2 {
+            z-index: 1;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        p {
+            z-index: 1;
+            position: relative;
+            font-family: var(--secondary-font);
+            color: var(--white);
+            font-size: var(--prestation);
+            padding-top: 5px;
+        }
+    }
+}

@@ -1,37 +1,20 @@
 <?php wp_head(); ?>
-    <div class="cursor-follower">
-            <div class="cursor-follower-inner"></div>
-        </div>
             <?php
                 $contenus = get_field('contenu');
-                $projet = get_post();
-                $title = get_field("nom_du_projet");
-                $add_text = get_field("texte_additionnel");
-                $project_type = get_field("type_de_projet");
-                $term = get_term($project_type);
-                $image = get_field("image_mise_en_avant");
+                $description = get_field('description');
             ?>
-        <main style="position: relative; padding: 0;">
-            <?php get_header(); ?>
-            <div class="top_project">
-                <div class="top_titles">
-                    <h1><?=$title?></h1>
-                    <p><?=$add_text?></p>
-                </div>
-                
-                <div class="marquee marquee_projects">
-                    <?php
-                        for($i = 0; $i < 10; $i++){
-                            ?>
-                                <p><?=$term->name?> • </p>
-                            <?php
-                        }
-                    ?>
-                </div>
-                <div class="top_image">
-                    <img src="<?=$image['url']?>" alt="<?=$image['alt']?>">
-                </div>
-        </main>
+            <main>
+                <section class="projet">
+                    <svg viewBox="0 0 1440 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M302.267 112.176C192.432 159.226 48.6699 161.97 -9.48198 157.46L-106.723 0H1504.88C1506.08 7.1402 1498.99 28.0723 1461 54.6789C1413.52 87.9372 1075.96 104.097 887.055 104.097C698.148 104.097 439.561 53.3636 302.267 112.176Z" fill="#14492C"/>
+                    </svg>
+
+                    <div class="projet_title">
+                        <h2 class="primary_text"><?= the_title() ?></h2>
+                        <p><?= $description ?></p>
+                    </div>
+                </section>
+            </main>
             <?php
                foreach ($contenus as $content) {
                 $template_name = $content['acf_fc_layout'];
