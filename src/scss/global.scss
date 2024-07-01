@@ -14,6 +14,10 @@
     overflow-x: hidden;
 }
 
+html, body {
+    background-color: #fff;
+}
+
 hr {
     color: #AEAEAE;
     z-index: 99;
@@ -67,5 +71,12 @@ hr {
     font-family: var(--primary-font);
     font-weight: 400;
     font-size: var(--title);
+    color: var(--primary-color);
+}
+
+.primry_desc_color {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: var(--prestation);
     color: var(--primary-color);
 }

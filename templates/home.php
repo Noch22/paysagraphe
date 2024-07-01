@@ -1,6 +1,6 @@
 <?php /* Template Name: Page d'accueil */
 wp_head();
-
+get_header();
 ?>
     <main>
         <div class="hero">

@@ -4,6 +4,7 @@ __webpack_public_path__ = window.WP.publicPath; // WP.publicPath come from funct
 import './main.scss'
 import Router from './utils/Router'
 import './js/home'
+import './js/projet'
 
 // Small router inspired from Sage framework, which use body class from WordPress
 // can be a class or a simple function, class can be called dynamically, just need a init method 

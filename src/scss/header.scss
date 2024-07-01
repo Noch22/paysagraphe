@@ -1,0 +1,28 @@
+header {
+    z-index: 9999;
+    position: fixed;
+    mix-blend-mode: difference;
+    .close {
+        .burger{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            .line1, .line2, .line3 {
+                background-color: var(--white);
+                display: block;
+                width: 32px;
+                height: 3px;
+                transition: all 0.3s ease-in-out;
+                color: white;
+            }
+
+            .line1 {
+                transform: translate(0, 12px);
+            }
+
+            .line3 {
+                transform: translate(0, -12px);
+            }
+        }
+    }
+}
