@@ -15,8 +15,14 @@
                 <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
         </div>
-        <div class="devis_circle">
+        <div class="right">
+            <div class="devis_circle">
+                <div class="text">
+                    <p>Demander un devis - Demander un devis - </p>
+                </div>
             <a href="index.php?page=contact">Devis</a>
+            </div>
         </div>
+
    </div>
 </header>
