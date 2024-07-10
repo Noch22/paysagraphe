@@ -942,15 +942,33 @@
     }
 }header {
     z-index: 9999;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
     .close {
         .burger{
             position: fixed;
             top: 20px;
             right: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 999;
+            --beforeScale: 1;
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: var(--complementary-color);
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+                transform-origin: center;
+                transform: scale( var(--beforeScale) );
+            }
+
             .line1, .line2, .line3 {
                 background-color: var(--white);
                 display: block;
@@ -958,6 +976,7 @@
                 height: 3px;
                 transition: all 0.3s ease-in-out;
                 color: white;
+                transform-origin: center;
             }
 
             .line1 {
@@ -967,11 +986,31 @@
             .line3 {
                 transform: translate(0, -12px);
             }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.menuOpen {
+                .line1 {
+                    transform: rotate(-45deg) translate(-2.5px, 2.5px);
+                    
+                }
+                .line3 {
+                    transform: rotate(45deg) translate(-2px, -1px);
+                }
+
+                .line2 {
+                    opacity: 0;
+                }
+            }
         }
     }
 
     .open {
-        display: flex;
+        display: none;
+        background-color: var(--primary-color);
+        
         .menu {
             width: 50%;
             min-height: 100vh;
@@ -1040,6 +1079,10 @@
                 animation: circle 10s linear infinite;
                 pointer-events: none;
 
+                p {
+                    transition: all 0.3s ease-in-out;
+                }
+
                 span {
                     position: absolute;
                     left: 50%;
@@ -1054,17 +1097,47 @@
             &.hover {
 
                 &::before {
-                    background-color: var(--white);
+                    background-color: var(--complementary-color);
                     transition: all 0.3s ease-in-out;
                 }
 
                 .text {
                     animation-play-state: paused;
+
+                    p {
+                        transform: scale(0);
+                        transition: all 0.3s ease-in-out;
+                        transform-origin: 200px 200px;
+                    }
                 }
+
+                .circle_devis {
+                    display: block;
+                    transition: all 0.3s ease-in-out;
+                }
+        }
+
+        .circle_devis {
+            font-family: var(--primary-font);
+            text-decoration: none;
+            color: var(--primary-color);
+            display: none;
+            z-index: 10;
+            transition: all 0.3s ease-in-out;
+            font-size: var(--prestation);
         }
         }
 
     }
+
+}
+
+&.headerOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 }@keyframes circle {
     0% {

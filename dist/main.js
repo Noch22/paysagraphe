@@ -3357,6 +3357,58 @@ circle.addEventListener("mouseover", () => {
 circle.addEventListener("mouseleave", () => {
   circle.classList.remove("hover");
 });
+const header = document.querySelector("header");
+const burger = document.querySelector("header .burger");
+const menuOpen = document.querySelector("header .open");
+const menuClose = document.querySelector("header .close");
+const body = document.querySelector("body");
+burger.addEventListener(
+  "click",
+  () => {
+    menuOpen.classList.toggle("active");
+    if (menuOpen.classList.contains("active")) {
+      var tl = gsap.timeline();
+      tl.to(".burger", {
+        "--beforeScale": 100,
+        duration: 0.3,
+        ease: "power2.inOut"
+      });
+      burger.classList.toggle("menuOpen");
+      header.classList.toggle("headerOpen");
+      tl.to(".open", {
+        display: "flex",
+        ease: "power2.inOut",
+        delay: 0.5
+      });
+      tl.to(
+        ".burger",
+        {
+          "--beforeScale": 1
+        }
+      );
+    } else {
+      var tl = gsap.timeline();
+      tl.to(".burger", {
+        "--beforeScale": 100,
+        duration: 0.3,
+        ease: "power2.inOut"
+      });
+      tl.to(".open", {
+        display: "none",
+        delay: 0.5,
+        ease: "power2.inOut"
+      });
+      burger.classList.toggle("menuOpen");
+      header.classList.toggle("headerOpen");
+      tl.to(
+        ".burger",
+        {
+          "--beforeScale": 1
+        }
+      );
+    }
+  }
+);
 
 
 /***/ }),
@@ -3643,7 +3695,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720354847158
+      // 1720627131313
       var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3663,7 +3715,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720358257021
+      // 1720627131433
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -4951,7 +5003,7 @@ class PhotoSwipeLightbox extends PhotoSwipeBase {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("e0599477c1ac238ab9ef")
+/******/ 		__webpack_require__.h = () => ("d444acb3196bac8793f4")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -18,9 +18,9 @@
         <div class="right">
             <div class="devis_circle">
                 <div class="text">
-                    <p>Demander un devis - Demander un devis - </p>
+                    <p>Devis - Devis - Devis - Devis - Devis -</p>
                 </div>
-            <a href="index.php?page=contact">Devis</a>
+                <a href="index.php?page=contact" class="circle_devis">Demander un devis</a>
             </div>
         </div>
 
