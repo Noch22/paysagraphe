@@ -955,7 +955,7 @@
             flex-direction: column;
             z-index: 999;
             --beforeScale: 1;
-
+            --beforeOpacity: 1;
             &::before {
                 content: '';
                 width: 50px;
@@ -964,9 +964,9 @@
                 border-radius: 50%;
                 background-color: var(--complementary-color);
                 z-index: -1;
-                transition: all 0.3s ease-in-out;
                 transform-origin: center;
                 transform: scale( var(--beforeScale) );
+                opacity: var(--beforeOpacity);
             }
 
             .line1, .line2, .line3 {
@@ -1009,7 +1009,9 @@
 
     .open {
         display: none;
-        background-color: var(--primary-color);
+        z-index: 998;
+        position: relative;
+        background-color: var(--complementary-color);
         
         .menu {
             width: 50%;
@@ -1024,6 +1026,8 @@
                 justify-content: center;
                 align-items: flex-start;
                 li {
+                    transform: translateY(-100%);
+                    opacity: 0;
                     padding: 10px;
                     a {
                         font-family: var(--primary-font);
@@ -1035,7 +1039,7 @@
                         width: 100%;
 
                         &:hover {
-                            color: var(--complementary-color);
+                            color: var(--primary-color);
                             transition: all 0.3s ease-in-out;
                             letter-spacing: 1px;
                         }
@@ -1088,7 +1092,7 @@
                     left: 50%;
                     transform-origin: 0 200px;
                     font-family: var(--primary-font);
-                    color: var(--complementary-color);
+                    color: var(--primary-color);
                     font-size: var(--subtitle);
                     pointer-events: none;
                     }
@@ -1097,7 +1101,7 @@
             &.hover {
 
                 &::before {
-                    background-color: var(--complementary-color);
+                    background-color: var(--white);
                     transition: all 0.3s ease-in-out;
                 }
 

@@ -23,28 +23,40 @@ burger.addEventListener('click', () => {
         var tl = gsap.timeline();
         tl.to(".burger", {
             '--beforeScale': 100,
-            duration: 0.3,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
+            duration: 0.5
 
         })
-        burger.classList.toggle('menuOpen');
-        header.classList.toggle('headerOpen');
         tl.to(".open", {
             display: 'flex',
-            ease: "power2.inOut",
-            delay: 0.5
         })
         tl.to(".burger", {
-            '--beforeScale': 1
+            '--beforeScale': 1,
+            '--beforeOpacity': 0
         }
         )
+        burger.classList.toggle('menuOpen');
+        header.classList.toggle('headerOpen');
+        tl.to(".menu ul li", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            ease: "power2.inOut",
+        })
     } else {
         var tl = gsap.timeline();
+        tl.to(".menu ul li", {
+            y: '-100%',
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power2.inOut",
+        })
         
         tl.to(".burger", {
             '--beforeScale': 100,
             duration: 0.3,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
+            '--beforeOpacity': 0
 
         })
         tl.to(".open", {
@@ -55,7 +67,8 @@ burger.addEventListener('click', () => {
         burger.classList.toggle('menuOpen');
         header.classList.toggle('headerOpen');
         tl.to(".burger", {
-            '--beforeScale': 1
+            '--beforeScale': 1,
+            '--beforeOpacity': 1
         }
         )
 
