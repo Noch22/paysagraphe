@@ -49,3 +49,4 @@ function custom_js_import() {
 add_action('wp_head', 'custom_js_import');
 
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'title-tag' );

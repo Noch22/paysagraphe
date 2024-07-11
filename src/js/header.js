@@ -16,6 +16,7 @@ const burger = document.querySelector('header .burger');
 const menuOpen = document.querySelector('header .open');
 const menuClose = document.querySelector('header .close');
 const body = document.querySelector('body');
+const links = document.querySelectorAll('.open a');
 burger.addEventListener('click', () => {
     menuOpen.classList.toggle('active');
 
@@ -51,27 +52,55 @@ burger.addEventListener('click', () => {
             stagger: 0.1,
             ease: "power2.inOut",
         })
-        
         tl.to(".burger", {
             '--beforeScale': 100,
-            duration: 0.3,
-            ease: "power2.inOut",
-            '--beforeOpacity': 0
-
+            '--beforeOpacity': 1
         })
         tl.to(".open", {
             display: 'none',
-            delay: 0.5,
-            ease: "power2.inOut"
         })
-        burger.classList.toggle('menuOpen');
-        header.classList.toggle('headerOpen');
         tl.to(".burger", {
             '--beforeScale': 1,
-            '--beforeOpacity': 1
-        }
-        )
+            ease: "power2.inOut",
+            duration: 0.5
+
+        })
+        setTimeout(function(){
+            burger.classList.toggle('menuOpen');
+            header.classList.toggle('headerOpen');
+        }, 1500);
+       
 
     }
 }
 );
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menuOpen.classList.toggle('active');
+        var tl = gsap.timeline();
+        tl.to(".menu ul li", {
+            y: '-100%',
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power2.inOut",
+        })
+        tl.to(".burger", {
+            '--beforeScale': 100,
+            '--beforeOpacity': 1
+        })
+        tl.to(".open", {
+            display: 'none',
+        })
+        tl.to(".burger", {
+            '--beforeScale': 1,
+            ease: "power2.inOut",
+            duration: 0.5
+
+        })
+        setTimeout(function(){
+            burger.classList.toggle('menuOpen');
+            header.classList.toggle('headerOpen');
+        }, 1500);
+    });
+});

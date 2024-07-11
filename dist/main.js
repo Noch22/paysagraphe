@@ -3362,6 +3362,7 @@ const burger = document.querySelector("header .burger");
 const menuOpen = document.querySelector("header .open");
 const menuClose = document.querySelector("header .close");
 const body = document.querySelector("body");
+const links = document.querySelectorAll(".open a");
 burger.addEventListener(
   "click",
   () => {
@@ -3401,27 +3402,51 @@ burger.addEventListener(
       });
       tl.to(".burger", {
         "--beforeScale": 100,
-        duration: 0.3,
-        ease: "power2.inOut",
-        "--beforeOpacity": 0
+        "--beforeOpacity": 1
       });
       tl.to(".open", {
-        display: "none",
-        delay: 0.5,
-        ease: "power2.inOut"
+        display: "none"
       });
-      burger.classList.toggle("menuOpen");
-      header.classList.toggle("headerOpen");
-      tl.to(
-        ".burger",
-        {
-          "--beforeScale": 1,
-          "--beforeOpacity": 1
-        }
-      );
+      tl.to(".burger", {
+        "--beforeScale": 1,
+        ease: "power2.inOut",
+        duration: 0.5
+      });
+      setTimeout(function() {
+        burger.classList.toggle("menuOpen");
+        header.classList.toggle("headerOpen");
+      }, 1500);
     }
   }
 );
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuOpen.classList.toggle("active");
+    var tl = gsap.timeline();
+    tl.to(".menu ul li", {
+      y: "-100%",
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.inOut"
+    });
+    tl.to(".burger", {
+      "--beforeScale": 100,
+      "--beforeOpacity": 1
+    });
+    tl.to(".open", {
+      display: "none"
+    });
+    tl.to(".burger", {
+      "--beforeScale": 1,
+      ease: "power2.inOut",
+      duration: 0.5
+    });
+    setTimeout(function() {
+      burger.classList.toggle("menuOpen");
+      header.classList.toggle("headerOpen");
+    }, 1500);
+  });
+});
 
 
 /***/ }),
@@ -3708,7 +3733,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720686932771
+      // 1720706706399
       var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3728,7 +3753,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720689766407
+      // 1720709667830
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -5016,7 +5041,7 @@ class PhotoSwipeLightbox extends PhotoSwipeBase {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("c5ba81ebbcb9dbf96270")
+/******/ 		__webpack_require__.h = () => ("8b889267d8545277761b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

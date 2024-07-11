@@ -9,10 +9,11 @@
    <div class="open">
         <div class="menu">
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="index.php?page=about">Projet</a></li>
-                <li><a href="index.php?page=contact">À Propos</a></li>
-                <li><a href="index.php?page=contact">Contact</a></li>
+                <? $home = get_home_url(); ?>
+                <li><a href="<?= $home."#accueil" ?>">Accueil</a></li>
+                <li><a href="<?= $home."#projets" ?>">Projets</a></li>
+                <li><a href="<?= $home."#apropos" ?>">À Propos</a></li>
+                <li><a href="<?= $home."#contact" ?>">Contact</a></li>
             </ul>
         </div>
         <div class="right">
@@ -20,7 +21,7 @@
                 <div class="text">
                     <p>Devis - Devis - Devis - Devis - Devis -</p>
                 </div>
-                <a href="index.php?page=contact" class="circle_devis">Demander un devis</a>
+                <a href="<?= $home."#devis" ?>" class="circle_devis">Demander un devis</a>
             </div>
         </div>
 
