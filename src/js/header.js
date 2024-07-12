@@ -76,7 +76,8 @@ burger.addEventListener('click', () => {
 );
 
 links.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
         menuOpen.classList.toggle('active');
         var tl = gsap.timeline();
         tl.to(".menu ul li", {
@@ -101,6 +102,11 @@ links.forEach(link => {
         setTimeout(function(){
             burger.classList.toggle('menuOpen');
             header.classList.toggle('headerOpen');
+            window.location.href = link.href;
+            console.log(link.href);
+            console.log('redirected');
         }, 1500);
+
     });
 });
+

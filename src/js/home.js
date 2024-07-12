@@ -68,5 +68,18 @@ function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }
-
 requestAnimationFrame(raf)
+
+
+document.querySelectorAll('#discover').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault()
+    const id = el.getAttribute('href')?.slice(24)
+    console.log(id)
+    if (!id) return
+    const target = document.getElementById(id)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    }
+  })
+})

@@ -3420,7 +3420,8 @@ burger.addEventListener(
   }
 );
 links.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
     menuOpen.classList.toggle("active");
     var tl = gsap.timeline();
     tl.to(".menu ul li", {
@@ -3444,6 +3445,9 @@ links.forEach((link) => {
     setTimeout(function() {
       burger.classList.toggle("menuOpen");
       header.classList.toggle("headerOpen");
+      window.location.href = link.href;
+      console.log(link.href);
+      console.log("redirected");
     }, 1500);
   });
 });
@@ -3519,6 +3523,20 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+document.querySelectorAll("#discover").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    var _a;
+    e.preventDefault();
+    const id = (_a = el.getAttribute("href")) == null ? void 0 : _a.slice(24);
+    console.log(id);
+    if (!id)
+      return;
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
 
 /***/ }),
@@ -3733,7 +3751,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720706706399
+      // 1720793812100
       var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3753,7 +3771,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720709667830
+      // 1720793812232
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -5041,7 +5059,7 @@ class PhotoSwipeLightbox extends PhotoSwipeBase {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("8b889267d8545277761b")
+/******/ 		__webpack_require__.h = () => ("6e3971c4ef458b5d0abc")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

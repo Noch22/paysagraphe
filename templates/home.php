@@ -18,10 +18,11 @@ get_header();
                     ?>
                 </div>
             </div>
-            <div class="home_title">
+            <div class="home_title" >
                 <h1>Paysagraphe</h1>
                 <h2>Concepteur Paysagiste</h2>
-                <a href="" class="cta" id="discover">Découvrir</a>
+                <? $home = get_home_url(); ?>
+                <a href="<?= $home . '#projets' ?>" class="cta" id="discover">Découvrir</a>
             </div>
         </div>
 
@@ -29,10 +30,10 @@ get_header();
             <path d="M302.18 160.345C192.369 239.38 48.639 243.989 -9.49994 236.413L-90 1.03264e-05L1473.4 -1.03264e-05C1474.6 11.9943 1498.64 19.0646 1460.66 63.759C1413.18 119.627 1075.7 146.772 886.837 146.772C697.972 146.772 439.443 61.5496 302.18 160.345Z" fill="#14492C"/>
         </svg>
 
-        <section class="projects" id="projets">
+        <section class="projects">
             <div class="projects_title_container">
                 <div class="projects_title">
-                    <h2>Mes projets</h2>
+                    <h2 id="projets">Mes projets</h2>
                         <div class="nav">
                                 <a class="projet_previous">
                                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,12 +108,12 @@ get_header();
             <svg viewBox="0 0 1440 275" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M210.5 139.101C55.7 141.247 5 200.367 -1 229.659V274.938H1593C1574.5 173.424 1534.9 -23.2328 1524.5 2.25763C1511.5 34.1206 1393 52.5676 1300.5 41.164C1208 29.7604 1128.5 18.0214 1023.5 81.412C918.5 144.803 649 75.7102 503 81.412C357 87.1138 404 136.418 210.5 139.101Z" fill="#14492C"/>
             </svg>
-            <div class="about_title" id="apropos">
+            <div class="about_title">
                 <h2>À propos</h2>
                 <hr>
             </div>
             <div class="about_content">
-                <div class="about_image">
+                <div class="about_image" id="apropos">
                     <?php $image= get_field('image_a_propos', 'option'); ?>
                     <img src="<?= $image['sizes']['large'] ?>" alt="<?= $image["alt"]?>">
                 </div>
@@ -132,7 +133,6 @@ get_header();
                 <h2 class="primary_text_color">Mes prestations</h2>
                 <hr>
             </div>
-
             <div class="prestations_container">
                 <?php
                     $prestations = get_field('prestations', 'option');
@@ -157,9 +157,8 @@ get_header();
                 <path d="M932.889 46.7203C1105.72 16.1791 1379.96 2.84792 1495.48 0L1545.5 191C1085 191 -66.5 189.5 -114.28 189.5C-137.916 189.5 210.273 74.1901 333.793 84.1397C457.313 94.0894 716.854 84.8968 932.889 46.7203Z" fill="#FE5E41"/>
             </svg>
 
-            <div class="devis_title" id="devis">
-                <h2 class="primary_text">Demander un devis</h2>
-                <a class="anchor" id="devis"></a>
+            <div class="devis_title">
+                <h2 class="primary_text" id="devis">Demander un devis</h2>
                 <hr>
             </div>
             <div class="devis_content">
@@ -172,8 +171,7 @@ get_header();
 
         <section class="contact" >
             <div class="contact_title">
-                <h2 class="primary_text_color">Me contacter</h2>
-                <a class="anchor" id="contact"></a>
+                <h2 class="primary_text_color" id="contact">Me contacter</h2>
                 <hr>
             </div>
             <div class="contact_content">
@@ -205,10 +203,23 @@ get_header();
 
 
 <script>
-    function closePopup() {
-    document.querySelector(".pop-up-send").style.display = "none";
+    function closePopup(name) {
+    document.querySelector("#" + name).style.display = "none";
+    console.log(document.querySelector("#" + name));
     console.log("close");
 }
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  direction: 'vertical', // vertical, horizontal
+  gestureDirection: 'vertical', // vertical, horizontal, both
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+})
 </script>
     </main>
 <?php
