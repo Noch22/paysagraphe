@@ -3346,7 +3346,7 @@ module.exports.formatError = function(err) {
   \**************************/
 /***/ (() => {
 
-const text = document.querySelector(".text p");
+const text = document.querySelector(".devis_circle .text p");
 text.innerHTML = text.innerText.split("").map(
   (char, i) => `<span style="transform:rotate(${i * 8.9}deg)">${char}</span>`
 ).join("");
@@ -3531,7 +3531,8 @@ document.querySelectorAll("#discover").forEach((el) => {
     console.log(id);
     if (!id)
       return;
-    const target = document.getElementById(id);
+    const target = document.querySelector(id);
+    console.log(target);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
@@ -3751,7 +3752,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720793812100
+      // 1721156326497
       var cssReload = __webpack_require__(/*! ../../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3771,7 +3772,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1720793812232
+      // 1721161989358
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -5059,7 +5060,7 @@ class PhotoSwipeLightbox extends PhotoSwipeBase {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6e3971c4ef458b5d0abc")
+/******/ 		__webpack_require__.h = () => ("4e27a1136efefc8e516e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

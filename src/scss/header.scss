@@ -211,3 +211,12 @@ header {
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        .open {
+            flex-direction: column;
+        }
+    }
+
+}

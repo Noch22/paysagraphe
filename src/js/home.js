@@ -77,7 +77,8 @@ document.querySelectorAll('#discover').forEach((el) => {
     const id = el.getAttribute('href')?.slice(24)
     console.log(id)
     if (!id) return
-    const target = document.getElementById(id)
+    const target = document.querySelector(id)
+    console.log(target)
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' })
     }

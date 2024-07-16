@@ -79,4 +79,14 @@ hr {
     font-weight: 400;
     font-size: var(--prestation);
     color: var(--primary-color);
+} 
+
+@media screen and (max-width: 768px) {
+    
+    :root {
+        --title: 42px;
+        --subtitle: 26px;
+        --cta: 20px;
+        --prestation: 14px;
+    }
 }

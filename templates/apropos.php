@@ -1,5 +1,6 @@
 <?php /* Template Name: À propos */
 wp_head();
+get_header();
 
 ?>
 

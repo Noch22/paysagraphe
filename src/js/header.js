@@ -1,4 +1,4 @@
-const text = document.querySelector('.text p');
+const text = document.querySelector('.devis_circle .text p');
 text.innerHTML = text.innerText.split('').map(
     (char, i) => `<span style="transform:rotate(${i * 8.9}deg)">${char}</span>`
 ).join('');

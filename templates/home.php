@@ -120,7 +120,8 @@ get_header();
                 <div class="about_text">
                     <h3>Ashley Martinez</h3>
                     <p><?= get_field('description_a_propos', 'option') ?></p>
-                    <a href="" class="cta_secondary">En découvrir d'avantage</a>
+                    <? $home = get_home_url(); ?>
+                    <a href="<?= $home . '/a-propos'?>" class="cta_secondary">En découvrir d'avantage</a>
                 </div>
             </div>
             <svg viewBox="0 0 1440 265" fill="none" xmlns="http://www.w3.org/2000/svg" id="bottom_shape">

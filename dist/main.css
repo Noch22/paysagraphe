@@ -638,6 +638,153 @@
     100% {
         transform: translateX(-100%);
     }
+}@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+
+        .swiper {
+            width: 350px;
+            height: 350px;
+            max-height: 50vh;
+            border-radius: 15px;
+            img {
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -o-object-position: center;
+                   object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .home_title {
+            width: 100%;
+            padding: 150px 15px 15px;
+            align-content: start;
+        }
+
+    }
+
+    .projects {
+        .projects_title_container {
+            .nav {
+                display: none;
+            }
+        }
+        .projects_container {
+            width: 100%;
+            height: 430px;
+
+            .swiper-wrapper {
+                margin: 30px 25px 0;
+            }
+
+            .swiper-slide {
+                width: 325px;
+                height: 430px;
+                max-height: 430px;
+                border-radius: 15px;
+                transition: all 0.3s ease-in-out;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .about {
+
+        .about_title {
+            margin: 15px;
+            padding: 0;
+            top: 50px;
+        }
+        .about_content {
+            flex-direction: column;
+
+            .about_image {
+                width: 100%;
+                img {
+                    min-height: 350px;
+                    max-height: 350px;
+                    height: 350px;
+                    width: 350px;
+                    border-radius: 15px;
+                }
+            }
+
+            .about_text {
+                width: 100%;
+                padding: 15px 15px 0;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .prestations {
+        .prestations_container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            padding: 0;
+            justify-content: center;
+            padding: 0 5px 0;
+            .prestation {
+                margin: 5px;
+                padding: 10px;
+
+                p {
+                    font-size: 12.5px;
+                    line-height: 15px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+
+    .devis {
+
+        svg:first-of-type {
+            top: 70px;
+        }
+        .devis_title {
+            margin: 15px;
+            padding: 0;
+            top: 100px;
+        }
+
+        .devis_content {
+            padding: 150px 0 0;
+
+            .wpcf7 {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .contact {
+        padding: 50px 0;
+        .contact_content {
+            flex-direction: column;
+            padding: 25px 15px 0;
+
+            .left {
+                margin: 0;
+            }
+
+            .right {
+                width: 100%;
+                text-align: left;
+                padding: 50px 0 0;
+                ul li a {
+                    font-size: var(--subtitle);
+                }
+            }
+        }
+    }
+
+    
 }:root {
     --primary-color: #14492C;
     --secondary-color: #E7E5E5;
@@ -704,6 +851,14 @@
     font-weight: 400;
     font-size: var(--prestation);
     color: var(--primary-color);
+}@media screen and (max-width: 768px) {
+    
+    :root {
+        --title: 42px;
+        --subtitle: 26px;
+        --cta: 20px;
+        --prestation: 14px;
+    }
 }footer {
     background-color: var(--complementary-color);
     color: var(--white);
@@ -744,6 +899,27 @@
             }
         }
     }
+}@media screen and (max-width: 768px) { 
+footer {
+    width: 100%;
+    ul {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        li {
+            padding: 5px;
+            width: 100%;
+
+            ul {
+                flex-direction: row;
+                justify-content: start;
+                width: 100%;
+            }
+        }
+    }
+}
+
 }.apropos {
     .apropos_title {
         background-color: var(--primary-color);
@@ -1153,6 +1329,13 @@
     100% {
         transform: rotate(360deg);
     }
+}@media screen and (max-width: 768px) {
+    header {
+        .open {
+            flex-direction: column;
+        }
+    }
+
 }
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/photoswipe/dist/photoswipe.css ***!

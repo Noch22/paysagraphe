@@ -50,3 +50,9 @@ add_action('wp_head', 'custom_js_import');
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
+
+add_action( 'wp_head', 'add_viewport_meta_tag' , '1' );
+
+function add_viewport_meta_tag() {
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />';
+}

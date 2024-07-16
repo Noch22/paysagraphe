@@ -2,6 +2,7 @@
             <?php
                 $contenus = get_field('contenu');
                 $description = get_field('description');
+                get_header();
             ?>
             <main>
                 <section class="projet">
