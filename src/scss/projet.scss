@@ -1,8 +1,8 @@
 .projet {
     position: relative;
     svg {
-        position: absolute;
-        top: 150px;
+        position: relative;
+        top: 0;
     }
 
     .projet_title {
@@ -24,4 +24,28 @@
             padding-top: 5px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .projet {
+        svg {
+            top: 0;
+            position: relative;
+        }
+
+        .projet_title {
+            padding: 30px 10px;
+
+            h2 {
+                font-size: var(--title);
+            }
+
+            p {
+                font-size: var(--prestation);
+            }
+        }
+    }
+
+
+
 }

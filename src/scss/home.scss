@@ -634,13 +634,14 @@
     }
 
     .projects {
+        overflow: hidden;
         .projects_title_container {
             .nav {
                 display: none;
             }
         }
         .projects_container {
-            width: 100%;
+            width: 100vw;
             height: 430px;
 
             .swiper-wrapper {

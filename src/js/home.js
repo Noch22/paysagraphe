@@ -21,8 +21,6 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
     spaceBetween: 35,
     centeredSlides: false,
-    
-  
     // Navigation arrows
     navigation: {
       nextEl: '.projet_next',
