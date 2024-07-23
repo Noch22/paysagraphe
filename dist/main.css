@@ -659,7 +659,7 @@
         }
 
         .home_title {
-            width: 100%;
+            width: 350px;
             padding: 150px 15px 15px;
             align-content: start;
         }
@@ -714,7 +714,7 @@
             }
 
             .about_text {
-                width: 100%;
+                width: 350px;
                 padding: 15px 15px 0;
 
                 p {
@@ -786,6 +786,65 @@
     }
 
     
+}@media screen and (min-width:769px) and (max-width: 1024px) {
+
+    .projects {
+        & .projects_container {
+            .swiper-slide {
+                width: 325px;
+                height: 430px;
+                max-height: 430px;
+                border-radius: 15px;
+                transition: all 0.3s ease-in-out;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .about {
+        .about_title {
+            padding: 55px 15px 0;
+        }
+
+        .about_content {
+            margin: 35px 0 0;
+            .about_image {
+                width: 50%;
+                img {
+                    min-height: 350px;
+                    max-height: 350px;
+                    height: 350px;
+                    width: 350px;
+                    border-radius: 15px;
+                }
+            }
+
+            .about_text {
+                width: 50%;
+                padding: 15px 15px 0;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+            
+        }
+
+        .devis {
+            svg:first-of-type {
+                top: 20px;
+            }
+
+            .devis_title {
+                padding: 80px 0 0;
+                margin: 0 15px;
+            }
+
+            .devis_content {
+                padding: 20px 0 0;
+            }
+        }
 }:root {
     --primary-color: #14492C;
     --secondary-color: #E7E5E5;
