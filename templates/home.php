@@ -19,8 +19,10 @@ get_header();
                 </div>
             </div>
             <div class="home_title" >
-                <h1>Paysagraphe</h1>
-                <h2>Concepteur Paysagiste</h2>
+                <div class="ligne">
+                    <h1>Paysagraphe</h1>
+                </div>
+                    <h2>Concepteur Paysagiste</h2>
                 <? $home = get_home_url(); ?>
                 <a href="<?= $home . '#projets' ?>" class="cta" id="discover">Découvrir</a>
             </div>

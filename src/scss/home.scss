@@ -24,18 +24,28 @@
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        .ligne{
+            width: auto;
+            height: fit-content;
+            position: relative;
+            overflow: hidden;
+        }
+
         h1 {
             font-family: 'Merriweather', serif;
             text-transform: uppercase;
             font-weight: 400;
             font-size: var(--title);
             color: var(--secondary-color);
+            transform: translateY(60px);
         }
         h2 {
             font-family: 'Quicksand', sans-serif;
             font-weight: 300;
             font-size: var(--subtitle);
             color: var(--secondary-color);
+            z-index: 2;
         }
         
         #discover {
@@ -800,9 +810,23 @@
             
         }
 
+        .prestations {
+            .prestations_container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0;
+                padding: 0;
+                justify-content: center;
+                padding: 0 5px 0;
+                .prestation {
+                    margin: 5px;
+                    padding: 10px;
+                }
+            }
+        }
+
         .devis {
             svg:first-of-type {
-                top: 20px;
+                top: 27px;
             }
 
             .devis_title {

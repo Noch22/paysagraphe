@@ -1,4 +1,5 @@
 const { space } = require("postcss/lib/list");
+import SplitType from 'split-type'
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -82,3 +83,27 @@ document.querySelectorAll('#discover').forEach((el) => {
     }
   })
 })
+
+
+
+var tl = gsap.timeline();
+
+tl.to(".hero .home_title h1", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut",
+})
+
+const text = SplitType.create('.hero .home_title h2');
+const chars = text.chars;
+
+tl.fromTo(chars, {
+    opacity: 0,
+},
+{
+    opacity: 1,
+    duration: 1,
+    stagger: 0.05,
+    ease: "power2.inOut",
+}, "-=0.5")
