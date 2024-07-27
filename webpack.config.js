@@ -10,6 +10,7 @@ const {
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
 
 console.log(process.env.NODE_ENV);
 const IS_DEV = process.env.NODE_ENV !== 'production';
@@ -65,7 +66,18 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader'
+          {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    postcssPresetEnv({
+                      browsers: 'last 2 versions',
+                    }),
+                  ],
+                },
+              },
+            },
         ]
       },
       {
@@ -82,7 +94,14 @@ const config = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-            }
+              postcssOptions: {
+                plugins: [
+                  postcssPresetEnv({
+                    browsers: 'last 2 versions',
+                  }),
+                ],
+              },
+            },
           },
           {
             loader: "sass-loader",
